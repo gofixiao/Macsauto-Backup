@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Macsauto.Domain.SalesModule.ServiceOrder">
+    <Position X="7.25" Y="11.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAQAgAAEAAAABAAIAAAAAQAAAAAAAAAAAAAAIAAIAA=</HashCode>
+      <FileName>SalesModule\ServiceOrder\ServiceOrder.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="VehicleRegistration" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="ServiceOrderItems" />
+      <Property Name="ServiceOrderProduct" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Macsauto.Domain.SalesModule.Service">
+    <Position X="12.75" Y="11.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>IAAAIAAAAAAgBAAEAAAAAAQAAAAIAAAAAACBAAIACAA=</HashCode>
+      <FileName>SalesModule\Service\Service.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Category" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="ServicePrices" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Macsauto.Domain.SalesModule.Product">
+    <Position X="7.5" Y="8" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAIAACAAAhBAQEAAAAAAQAAAAAAAGAAAIAAgCACAA=</HashCode>
+      <FileName>SalesModule\Product\Product.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Category" />
+      <Property Name="Inventory" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Macsauto.Domain.SalesModule.Customer">
+    <Position X="15.25" Y="7.25" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AIAQAAAAICAAAAAAABAABAIAQCgAAAAAAAAAAgAAAAQ=</HashCode>
+      <FileName>SalesModule\Customer\Customer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Membership" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="VehicleRegistrations" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Macsauto.Domain.SalesModule.Vehicle">
+    <Position X="9.75" Y="7.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIACAEAgAgAAAAAAAAAEAAAAgAggAAQAA=</HashCode>
+      <FileName>SalesModule\Vehicle\Vehicle.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Model" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Macsauto.Domain.SalesModule.VehicleRegistration">
+    <Position X="12.5" Y="8.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAEAAQBAAAAAAAAAAACAACAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>SalesModule\Vehicle\VehicleRegistration.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="RegisteredVehicle" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Macsauto.Domain.SalesModule.Membership">
+    <Position X="18" Y="6.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>EAAAAAAIgAAQgAAAEAARAgQEBQgAABACAJEAQAAAAgQ=</HashCode>
+      <FileName>SalesModule\Customer\Membership\Membership.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Macsauto.Domain.SalesModule.ProductCategory">
+    <Position X="10.5" Y="14.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAgAAAEAAAAAAQAAAgAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>SalesModule\Product\Category\ProductCategory.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ParentCategory" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Macsauto.Domain.SalesModule.Inventory">
+    <Position X="4.5" Y="8.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAgAIAEAAAAAgQAAAAEAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>SalesModule\Inventory\Inventory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Macsauto.Domain.SalesModule.ServiceCategory">
+    <Position X="12.25" Y="4.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAgAAAEAAAAAAQAAAgAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>SalesModule\Service\Category\ServiceCategory.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ParentCategory" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Macsauto.Domain.SalesModule.ServicePricing">
+    <Position X="15.75" Y="12" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AgABAAAAAQAAAAAQAEAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SalesModule\Service\ServicePricing.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Macsauto.Domain.SalesModule.Storage">
+    <Position X="1.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAgAAAEAAAAAAQAAAAACAAAAIEAARAAAAA=</HashCode>
+      <FileName>SalesModule\Inventory\Storage\Storage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Macsauto.Domain.SalesModule.StoredInventory">
+    <Position X="4.5" Y="12.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAgAAAAACAAAAAAgAAggA=</HashCode>
+      <FileName>SalesModule\Inventory\Storage\StoredInventory.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Inventory" />
+      <Property Name="Storage" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Macsauto.Domain.SalesModule.StockMovement">
+    <Position X="0.5" Y="14.25" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gAAAAACAAAAAAAQBAAAAAAAAAAAAAAUAAQQAAAAAAQA=</HashCode>
+      <FileName>SalesModule\Inventory\StockMovement\StockMovement.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="StockMovementItems" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Macsauto.Domain.SalesModule.StockMovementItem">
+    <Position X="1.25" Y="11.5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAAQAAAAAAACAAAABggAAggA=</HashCode>
+      <FileName>SalesModule\Inventory\StockMovement\StockMovementItem.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Inventory" />
+      <Property Name="Storage" />
+      <Property Name="StockMovement" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Macsauto.Domain.SalesModule.ServiceOrderItem">
+    <Position X="7.25" Y="14.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAQAAgAAQAAABAAAAAIIAwAAAAAABQAgCAQA=</HashCode>
+      <FileName>SalesModule\ServiceOrder\ServiceOrderItem.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Service" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Macsauto.Domain.SalesModule.ServiceOrderProduct">
+    <Position X="10.25" Y="11" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AgACAAAAAQAAAAABAAAAAAAAAAIAAAAAAIAAwAAAAQA=</HashCode>
+      <FileName>SalesModule\ServiceOrder\ServiceOrderProduct.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ServiceOrder" />
+      <Property Name="Product" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Macsauto.Domain.SalesModule.VehicleModel">
+    <Position X="6.75" Y="4.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAgAQBAAAAAAQAAAAAAAAAAQAAAAIBAAA=</HashCode>
+      <FileName>SalesModule\Vehicle\VehicleModel\VehicleModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Brand" />
+      <Property Name="Size" />
+      <Property Name="Type" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Macsauto.Domain.SalesModule.VehicleBrand">
+    <Position X="9.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SalesModule\Vehicle\VehicleBrand\VehicleBrand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Macsauto.Domain.SalesModule.StockTransfer">
+    <Position X="4.5" Y="1.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAEAAAAAAAACAEAAAAAAAAAAAAQAAAAAAAGA=</HashCode>
+      <FileName>SalesModule\Inventory\StockTransfer\StockTransfer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="StockTransferItems" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Macsauto.Domain.SalesModule.StockTransferItem">
+    <Position X="4.5" Y="5.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAACAAgAIAACAAABAAiAAAAA=</HashCode>
+      <FileName>SalesModule\Inventory\StockTransfer\StockTransferItem.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Inventory" />
+      <Property Name="From" />
+      <Property Name="To" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Macsauto.Domain.SalesModule.Merchandise">
+    <Position X="1.5" Y="8.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAgAAAEAAkAAAQAAAAAAACAAAAAAgAAAAA=</HashCode>
+      <FileName>SalesModule\Merchandise\Merchandise.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Inventory" />
+    </ShowAsAssociation>
+  </Class>
+  <Enum Name="Macsauto.Domain.SalesModule.VehicleSize">
+    <Position X="6.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAAAA=</HashCode>
+      <FileName>SalesModule\Vehicle\VehicleModel\VehicleSize.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Macsauto.Domain.SalesModule.VehicleType">
+    <Position X="9.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SalesModule\Vehicle\VehicleModel\VehicleType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

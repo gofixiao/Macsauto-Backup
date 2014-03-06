@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D654ADD3-06F6-466C-AD22-DF18854506F0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Macsauto.Infrastructure</RootNamespace>
+    <AssemblyName>Macsauto.Infrastructure</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <DontImportPostSharp>True</DontImportPostSharp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\packages\Autofac.3.2.0\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=10.9.0.4, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="FluentNHibernate">
+      <HintPath>..\packages\FluentNHibernate.1.4.0.0\lib\net35\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\packages\Iesi.Collections.3.2.0.4000\lib\Net35\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Build.Framework" />
+    <Reference Include="MySql.Data, Version=6.7.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.7.4\lib\net40\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\packages\NHibernate.3.3.3.4001\lib\Net35\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connector\Printing\Page\BasePage.cs" />
+    <Compile Include="Connector\Printing\PrinterManager.cs" />
+    <Compile Include="Connector\SmartCard\Reader\APDUCommands.cs" />
+    <Compile Include="Connector\SmartCard\Card\SmartCard.cs" />
+    <Compile Include="Connector\SmartCard\Reader\ReaderCardState.cs" />
+    <Compile Include="Connector\SmartCard\Reader\ReaderCardStateChangedEventArgs.cs" />
+    <Compile Include="Connector\SmartCard\SmartCardManager.cs" />
+    <Compile Include="Connector\SmartCard\Reader\SmartCardReader.cs" />
+    <Compile Include="Connector\SmartCard\ModsWinsCard.cs" />
+    <Compile Include="Helper\Client\ClientAdapter.cs" />
+    <Compile Include="Helper\Client\MacAdapter.cs" />
+    <Compile Include="Helper\Extension\CharHelper.cs" />
+    <Compile Include="Helper\Extension\CollectionExtension.cs" />
+    <Compile Include="Helper\Extension\FormHelper.cs" />
+    <Compile Include="Helper\Extension\GuidExtension.cs" />
+    <Compile Include="Helper\Extension\ObjectExtension.cs" />
+    <Compile Include="Helper\Extension\StringExtension.cs" />
+    <Compile Include="Helper\Hasher\Contract\IHasher.cs" />
+    <Compile Include="Helper\Hasher\Md5Hasher.cs" />
+    <Compile Include="Helper\MySql\MySqlDumper.cs" />
+    <Compile Include="InfrastructureModule.cs" />
+    <Compile Include="NHibernate\Common\EntityCodeFactory.cs" />
+    <Compile Include="NHibernate\Common\EntityService.cs" />
+    <Compile Include="NHibernate\Common\Repository.cs" />
+    <Compile Include="NHibernate\Common\TransactionalExtension.cs" />
+    <Compile Include="NHibernate\Common\TransactionalRepository.cs" />
+    <Compile Include="NHibernate\Contract\IRepository.cs" />
+    <Compile Include="NHibernate\Contract\ITransactionalRepository.cs" />
+    <Compile Include="NHibernate\Conventions\CascadeAllConvention.cs" />
+    <Compile Include="NHibernate\Conventions\ColumnNameConvention.cs" />
+    <Compile Include="NHibernate\Conventions\EnumConvention.cs" />
+    <Compile Include="NHibernate\Conventions\TableNameConvention.cs" />
+    <Compile Include="NHibernate\CustomType\GenderType.cs" />
+    <Compile Include="NHibernate\Interceptors\SqlStatementInterceptor.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Address\CityMap.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Address\ProvinceMap.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Address\CityRepository.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Address\ProvinceRepository.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Branch\BranchMap.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Branch\BranchRepository.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Customer\MembershipMap.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Customer\MembershipRegistrationMap.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Customer\MembershipRegistrationRepository.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\EntityMap.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Customer\CustomerMap.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Customer\CustomerRepository.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Employee\EmployeeMap.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Employee\EmployeeRepository.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Inventory\InventoryMap.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Inventory\InventoryRepository.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Inventory\StockMovement\StockMovementItemMap.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Inventory\StockMovement\StockMovementMap.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Inventory\StockMovement\StockMovementRepository.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Inventory\Storage\StorageMap.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Inventory\Storage\StoredInventoryMap.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Inventory\Storage\StorageRepository.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Merchandise\MerchandiseMap.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Merchandise\MerchandiseRepository.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\NHibernateRepository.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Payment\CardIssuerMap.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Payment\CardIssuerRepository.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Payment\CashPaymentMap.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Payment\CreditCardPaymentMap.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Payment\DebitCardPaymentMap.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Payment\PaymentMap.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Payment\PaymentRepository.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\PointRedemption\PointRedemptionItemMap.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\PointRedemption\PointRedemptionMap.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\PointRedemption\PointRedemptionRepository.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Product\ProductCategoryMap.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Product\ProductCategoryRepository.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Product\ProductMap.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Product\ProductRepository.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Product\UnitOfMeasurementMap.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Product\UnitOfMeasurementRepository.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\PurchaseOrder\PurchaseOrderItemMap.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\PurchaseOrder\PurchaseOrderMap.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\PurchaseOrder\PurchaseOrderRepository.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\ServiceBooking\ServiceBookingItemMap.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\ServiceBooking\ServiceBookingMap.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\ServiceBooking\ServiceBookingRepository.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\ServiceOrder\ServiceOrderItemMap.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\ServiceOrder\ServiceOrderMap.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\ServiceOrder\ServiceOrderProductMap.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\ServiceOrder\ServiceOrderRepository.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Service\ServiceCategoryMap.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Service\ServiceCategoryRepository.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Service\ServiceMap.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Service\ServicePricingMap.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Service\ServiceRepository.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Terminal\TerminalMap.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Terminal\TerminalRepository.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\User\UserMap.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\User\UserRepository.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Vehicle\VehicleBrand\VehicleBrandMap.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Vehicle\VehicleBrand\VehicleBrandRepository.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Vehicle\VehicleMap.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Vehicle\VehicleModel\VehicleModelMap.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Vehicle\VehicleModel\VehicleModelRepository.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Vehicle\VehicleRegistrationMap.cs" />
+    <Compile Include="NHibernate\MapsAndRepositories\Vehicle\VehicleRegistrationRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="NHibernate\NHibernateSessionManager.cs" />
+    <Compile Include="Helper\Extension\MethodExtension.cs" />
+    <Compile Include="Service\LoginService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Helper\Logger\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Macsauto.Domain\Macsauto.Domain.csproj">
+      <Project>{939B9085-D6B8-4D96-9763-73A737B396BC}</Project>
+      <Name>Macsauto.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Configs\packages.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\PostSharp.3.0.33\tools\PostSharp.targets" Condition="Exists('..\packages\PostSharp.3.0.33\tools\PostSharp.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

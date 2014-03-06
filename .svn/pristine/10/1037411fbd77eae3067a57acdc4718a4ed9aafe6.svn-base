@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>PostSharp.Patterns.Diagnostics.NLog</id>
+    <version>3.0.33</version>
+    <title>PostSharp Diagnostics Pattern Library for NLog</title>
+    <authors>SharpCrafters s.r.o.</authors>
+    <owners>SharpCrafters s.r.o.</owners>
+    <licenseUrl>http://www.sharpcrafters.com/links/nuget-license</licenseUrl>
+    <projectUrl>http://www.sharpcrafters.com/links/nuget-home</projectUrl>
+    <iconUrl>http://www.sharpcrafters.com/nuget/icon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Adds support for NLog to PostSharp.Patterns.Diagnostics.</description>
+    <language>en-US</language>
+    <tags>postsharp sharcrafters aop aspect monitoring instrumentation log logging tracing nlog log4net elmah Patterns</tags>
+    <dependencies>
+      <dependency id="PostSharp.Patterns.Diagnostics" version="[3.0.33]" />
+      <dependency id="NLog" version="[2.0.0.2000]" />
+    </dependencies>
+  </metadata>
+</package>

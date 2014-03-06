@@ -1,0 +1,49 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Macsauto.Infrastructure/NHibernate/Repositories/User/UserMap.cs">
+    <Files>
+      <File FileName="Macsauto.Infrastructure/NHibernate/Repositories/User/UserRepository.cs" Line="1" Column="1" />
+      <File FileName="Macsauto.Domain/CommonModule/Customer/Member.cs" Line="1" Column="1" />
+      <File FileName="Macsauto.Domain/CommonModule/Customer/Customer.cs" Line="1" Column="1" />
+      <File FileName="Macsauto.Domain/CommonModule/Customer/MemberRegistrationService.cs" Line="1" Column="1" />
+      <File FileName="Macsauto.Domain/CommonModule/Customer/MembershipStatus.cs" Line="1" Column="1" />
+      <File FileName="Macsauto.Domain/CommonModule/Employee/Employee.cs" Line="1" Column="1" />
+      <File FileName="Macsauto.Domain/CommonModule/User/IUserRepository.cs" Line="1" Column="1" />
+      <File FileName="Macsauto.Domain/CommonModule/User/User.cs" Line="1" Column="1" />
+      <File FileName="Macsauto.Domain/CommonModule/User/UserService.cs" Line="1" Column="1" />
+      <File FileName="Macsauto.Domain/CommonModule/Vehicle/Vehicle.cs" Line="1" Column="1" />
+      <File FileName="Macsauto.Domain/CommonModule/Vehicle/VehicleBrand.cs" Line="1" Column="1" />
+      <File FileName="Macsauto.Infrastructure/NHibernate/Repositories/Employee/EmployeeMap.cs" Line="1" Column="1" />
+      <File FileName="Macsauto.Infrastructure/NHibernate/Repositories/Employee/EmployeeRepository.cs" Line="19" Column="49" />
+      <File FileName="Macsauto.Infrastructure/NHibernate/Repositories/User/UserMap.cs" Line="10" Column="32" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Domain" expanded="True">
+            <Node name="Macsauto.Domain" expanded="True" />
+          </Node>
+          <Node name="Infrastructure" expanded="True">
+            <Node name="Macsauto.Infrastructure" expanded="True">
+              <Node name="NHibernate" expanded="True">
+                <Node name="Repositories" expanded="True">
+                  <Node name="Employee" expanded="True" />
+                  <Node name="User" expanded="True">
+                    <Node name="UserRepository.cs" selected="True" />
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

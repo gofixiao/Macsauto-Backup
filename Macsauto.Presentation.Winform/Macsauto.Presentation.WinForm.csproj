@@ -1,0 +1,1308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FC9BF7A0-B0A7-4054-9350-6FEC722EFA29}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Macsauto.Presentation.WinForm</RootNamespace>
+    <AssemblyName>Macsauto.Presentation.WinForm</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Macsauto.Presentation.WinForm.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Macsauto.Presentation.WinForm.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\packages\Autofac.3.0.2\lib\net40\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Autofac.Configuration">
+      <HintPath>..\packages\Autofac.3.0.2\lib\net40\Autofac.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Extras.DynamicProxy2">
+      <HintPath>..\packages\Autofac.Extras.DynamicProxy2.3.0.3\lib\net40\Autofac.Extras.DynamicProxy2.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core">
+      <HintPath>..\packages\Castle.Core.3.2.2\lib\net40-client\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=10.9.0.4, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=9.0.0.0, Culture=neutral, PublicKeyToken=e116d99a00eca71b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\DotNetBar\Bin\DevComponents.DotNetBar2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevComponents.TreeGX, Version=10.9.0.4, Culture=neutral, PublicKeyToken=cfcbd7476b2389d1, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPPlus">
+      <HintPath>..\packages\EPPlus.3.1.3.3\lib\net35\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.7.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MySql.Data.6.7.4\lib\net40\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.3.3.3.4001\lib\Net35\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BootStrap.cs" />
+    <Compile Include="Common\Printing\LocalReportPrinter.cs" />
+    <Compile Include="Common\Printing\PrintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Printing\PrintForm.Designer.cs">
+      <DependentUpon>PrintForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationModule\Inventory\Add\Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationModule\Inventory\Add\Add.Designer.cs">
+      <DependentUpon>Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationModule\Inventory\Add\AddPresenter.cs" />
+    <Compile Include="ConfigurationModule\Inventory\Add\InventoryStorageDto.cs" />
+    <Compile Include="ConfigurationModule\Inventory\QuickAdd\QuickAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationModule\Inventory\QuickAdd\QuickAdd.Designer.cs">
+      <DependentUpon>QuickAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationModule\Inventory\QuickAdd\QuickAddPresenter.cs" />
+    <Compile Include="ConfigurationModule\Inventory\ViewDetail\ViewDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationModule\Inventory\ViewDetail\ViewDetail.Designer.cs">
+      <DependentUpon>ViewDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationModule\Inventory\ViewDetail\ViewDetailPresenter.cs" />
+    <Compile Include="ConfigurationModule\Inventory\View\View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationModule\Inventory\View\View.Designer.cs">
+      <DependentUpon>View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationModule\Inventory\View\ViewPresenter.cs" />
+    <Compile Include="ConfigurationModule\Menu\Menu.cs" />
+    <Compile Include="ConfigurationModule\Menu\MenuFactory.cs" />
+    <Compile Include="ConfigurationModule\ProductCategory\Add\Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationModule\ProductCategory\Add\Add.Designer.cs">
+      <DependentUpon>Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationModule\ProductCategory\Add\AddPresenter.cs" />
+    <Compile Include="ConfigurationModule\ProductCategory\View\View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationModule\ProductCategory\View\View.Designer.cs">
+      <DependentUpon>View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationModule\ProductCategory\View\ViewPresenter.cs" />
+    <Compile Include="ConfigurationModule\ServiceCategory\Add\Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationModule\ServiceCategory\Add\Add.Designer.cs">
+      <DependentUpon>Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationModule\ServiceCategory\Add\AddPresenter.cs" />
+    <Compile Include="ConfigurationModule\ServiceCategory\ViewDetail\ViewDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationModule\ServiceCategory\ViewDetail\ViewDetail.Designer.cs">
+      <DependentUpon>ViewDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationModule\ServiceCategory\ViewDetail\ViewDetailPresenter.cs" />
+    <Compile Include="ConfigurationModule\ServiceCategory\View\View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationModule\ServiceCategory\View\View.Designer.cs">
+      <DependentUpon>View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationModule\ServiceCategory\View\ViewPresenter.cs" />
+    <Compile Include="ConfigurationModule\Startup\StartupConfigurationPresenter.cs" />
+    <Compile Include="ConfigurationModule\Storage\Add\Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationModule\Storage\Add\Add.Designer.cs">
+      <DependentUpon>Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationModule\Storage\Add\AddPresenter.cs" />
+    <Compile Include="ConfigurationModule\Storage\View\View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationModule\Storage\View\View.Designer.cs">
+      <DependentUpon>View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationModule\Storage\View\ViewPresenter.cs" />
+    <Compile Include="ConfigurationModule\UnitOfMeasurement\Add\Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationModule\UnitOfMeasurement\Add\Add.Designer.cs">
+      <DependentUpon>Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationModule\UnitOfMeasurement\Add\AddPresenter.cs" />
+    <Compile Include="ConfigurationModule\UnitOfMeasurement\View\View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationModule\UnitOfMeasurement\View\View.Designer.cs">
+      <DependentUpon>View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationModule\UnitOfMeasurement\View\ViewPresenter.cs" />
+    <Compile Include="ConfigurationModule\Vehicle\Brand\Add\Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationModule\Vehicle\Brand\Add\Add.Designer.cs">
+      <DependentUpon>Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationModule\Vehicle\Brand\Add\AddPresenter.cs" />
+    <Compile Include="ConfigurationModule\Vehicle\Brand\View\View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationModule\Vehicle\Brand\View\View.Designer.cs">
+      <DependentUpon>View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationModule\Vehicle\Brand\View\ViewPresenter.cs" />
+    <Compile Include="ConfigurationModule\Vehicle\Model\Add\Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationModule\Vehicle\Model\Add\Add.Designer.cs">
+      <DependentUpon>Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationModule\Vehicle\Model\Add\AddPresenter.cs" />
+    <Compile Include="ConfigurationModule\Vehicle\Model\View\View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationModule\Vehicle\Model\View\View.Designer.cs">
+      <DependentUpon>View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationModule\Vehicle\Model\View\ViewPresenter.cs" />
+    <Compile Include="Controls\ButtonStripItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\NumberTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\NumButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomArgs\FormSelectionArgs.cs" />
+    <Compile Include="FormFactory.cs" />
+    <Compile Include="CustomArgs\FormTransactionSuccessArgs.cs" />
+    <Compile Include="IFormFactory.cs" />
+    <Compile Include="ConfigurationModule\Branch\Add\Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationModule\Branch\Add\Add.Designer.cs">
+      <DependentUpon>Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationModule\Branch\Add\AddPresenter.cs" />
+    <Compile Include="ConfigurationModule\Branch\View\View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationModule\Branch\View\View.Designer.cs">
+      <DependentUpon>View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationModule\Branch\ViewAll\ViewAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationModule\Branch\ViewAll\ViewAll.Designer.cs">
+      <DependentUpon>ViewAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationModule\Branch\ViewAll\ViewAllPresenter.cs" />
+    <Compile Include="ConfigurationModule\Branch\View\ViewPresenter.cs" />
+    <Compile Include="ManagementModule\Customer\Add\Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagementModule\Customer\Add\Add.Designer.cs">
+      <DependentUpon>Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagementModule\Customer\Add\AddPresenter.cs" />
+    <Compile Include="ManagementModule\Customer\View\View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagementModule\Customer\View\View.Designer.cs">
+      <DependentUpon>View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagementModule\Customer\View\ViewPresenter.cs" />
+    <Compile Include="ManagementModule\Merchandise\AddFromInventory\AddFromInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagementModule\Merchandise\AddFromInventory\AddFromInventory.Designer.cs">
+      <DependentUpon>AddFromInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagementModule\Merchandise\AddFromInventory\AddFromInventoryPresenter.cs" />
+    <Compile Include="ManagementModule\Merchandise\Add\Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagementModule\Merchandise\Add\Add.Designer.cs">
+      <DependentUpon>Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagementModule\Merchandise\Add\AddPresenter.cs" />
+    <Compile Include="ManagementModule\Merchandise\View\View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagementModule\Merchandise\View\View.Designer.cs">
+      <DependentUpon>View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagementModule\Merchandise\View\ViewPresenter.cs" />
+    <Compile Include="ManagementModule\Product\AddFromInventory\AddFromInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagementModule\Product\AddFromInventory\AddFromInventory.Designer.cs">
+      <DependentUpon>AddFromInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagementModule\Product\AddFromInventory\AddFromInventoryPresenter.cs" />
+    <Compile Include="ManagementModule\Product\Add\AddPresenter.cs" />
+    <Compile Include="ManagementModule\Product\Add\Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagementModule\Product\Add\Add.Designer.cs">
+      <DependentUpon>Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagementModule\Product\View\View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagementModule\Product\View\View.Designer.cs">
+      <DependentUpon>View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagementModule\Product\View\ViewPresenter.cs" />
+    <Compile Include="ManagementModule\Service\Add\Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagementModule\Service\Add\Add.Designer.cs">
+      <DependentUpon>Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagementModule\Service\Add\AddPresenter.cs" />
+    <Compile Include="ManagementModule\Service\Add\ServicePricingDto.cs" />
+    <Compile Include="ManagementModule\Service\View\View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagementModule\Service\View\View.Designer.cs">
+      <DependentUpon>View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagementModule\Service\View\ViewPresenter.cs" />
+    <Compile Include="ManagementModule\StockMovement\Add\Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagementModule\StockMovement\Add\Add.Designer.cs">
+      <DependentUpon>Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagementModule\StockMovement\Add\AddPresenter.cs" />
+    <Compile Include="ManagementModule\StockMovement\Add\StockMovementItemDto.cs" />
+    <Compile Include="ManagementModule\StockMovement\View\View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagementModule\StockMovement\View\View.Designer.cs">
+      <DependentUpon>View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagementModule\StockMovement\View\ViewPresenter.cs" />
+    <Compile Include="PointOfSalesModule\Common\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PointOfSalesModule\Customer\Select\Select.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PointOfSalesModule\Customer\Select\Select.Designer.cs">
+      <DependentUpon>Select.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PointOfSalesModule\Customer\Select\SelectPresenter.cs" />
+    <Compile Include="PointOfSalesModule\Customer\View\MembershipTransactionDto.cs" />
+    <Compile Include="PointOfSalesModule\Customer\View\View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PointOfSalesModule\Customer\View\View.Designer.cs">
+      <DependentUpon>View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PointOfSalesModule\Customer\View\ViewPresenter.cs" />
+    <Compile Include="PointOfSalesModule\Dashboard\Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PointOfSalesModule\Dashboard\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PointOfSalesModule\Dashboard\DashboardPresenter.cs" />
+    <Compile Include="PointOfSalesModule\Login\LoginFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PointOfSalesModule\Login\LoginFrm.Designer.cs">
+      <DependentUpon>LoginFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PointOfSalesModule\Login\LoginPresenter.cs" />
+    <Compile Include="MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PointOfSalesModule\Payment\Create\Create.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PointOfSalesModule\Payment\Create\Create.Designer.cs">
+      <DependentUpon>Create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PointOfSalesModule\Payment\Create\CreatePresenter.cs" />
+    <Compile Include="PointOfSalesModule\ServiceBooking\Create\Create.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PointOfSalesModule\ServiceBooking\Create\Create.Designer.cs">
+      <DependentUpon>Create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PointOfSalesModule\ServiceBooking\Create\CreatePresenter.cs" />
+    <Compile Include="PointOfSalesModule\ServiceBooking\Create\ServiceBookingDto.cs" />
+    <Compile Include="PointOfSalesModule\ServiceBooking\View\View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PointOfSalesModule\ServiceBooking\View\View.Designer.cs">
+      <DependentUpon>View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PointOfSalesModule\ServiceBooking\View\ViewPresenter.cs" />
+    <Compile Include="PresentationModule.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.cs" />
+    <Compile Include="SplashScreen\SplashEventArgs.cs" />
+    <Compile Include="SplashScreen\SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen\SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationModule\Startup\StartupConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationModule\Startup\StartupConfiguration.Designer.cs">
+      <DependentUpon>StartupConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen\StartupDataLoader.cs" />
+    <EmbeddedResource Include="ConfigurationModule\Inventory\Add\Add.resx">
+      <DependentUpon>Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationModule\Inventory\QuickAdd\QuickAdd.resx">
+      <DependentUpon>QuickAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationModule\Inventory\ViewDetail\ViewDetail.resx">
+      <DependentUpon>ViewDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationModule\Inventory\View\View.resx">
+      <DependentUpon>View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationModule\ProductCategory\Add\Add.resx">
+      <DependentUpon>Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationModule\ProductCategory\View\View.resx">
+      <DependentUpon>View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationModule\ServiceCategory\Add\Add.resx">
+      <DependentUpon>Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationModule\ServiceCategory\ViewDetail\ViewDetail.resx">
+      <DependentUpon>ViewDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationModule\ServiceCategory\View\View.resx">
+      <DependentUpon>View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationModule\Storage\Add\Add.resx">
+      <DependentUpon>Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationModule\Storage\View\View.resx">
+      <DependentUpon>View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationModule\UnitOfMeasurement\Add\Add.resx">
+      <DependentUpon>Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationModule\UnitOfMeasurement\View\View.resx">
+      <DependentUpon>View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationModule\Vehicle\Brand\Add\Add.resx">
+      <DependentUpon>Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationModule\Vehicle\Brand\View\View.resx">
+      <DependentUpon>View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationModule\Vehicle\Model\Add\Add.resx">
+      <DependentUpon>Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationModule\Vehicle\Model\View\View.resx">
+      <DependentUpon>View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationModule\Branch\Add\Add.resx">
+      <DependentUpon>Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationModule\Branch\View\View.resx">
+      <DependentUpon>View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationModule\Branch\ViewAll\ViewAll.resx">
+      <DependentUpon>ViewAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagementModule\Customer\Add\Add.resx">
+      <DependentUpon>Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagementModule\Customer\View\View.resx">
+      <DependentUpon>View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagementModule\Merchandise\AddFromInventory\AddFromInventory.resx">
+      <DependentUpon>AddFromInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagementModule\Merchandise\Add\Add.resx">
+      <DependentUpon>Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagementModule\Merchandise\View\View.resx">
+      <DependentUpon>View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagementModule\Product\AddFromInventory\AddFromInventory.resx">
+      <DependentUpon>AddFromInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagementModule\Product\View\View.resx">
+      <DependentUpon>View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagementModule\Service\Add\Add.resx">
+      <DependentUpon>Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagementModule\Service\View\View.resx">
+      <DependentUpon>View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagementModule\StockMovement\Add\Add.resx">
+      <DependentUpon>Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagementModule\StockMovement\View\View.resx">
+      <DependentUpon>View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PointOfSalesModule\Customer\Select\Select.resx">
+      <DependentUpon>Select.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PointOfSalesModule\Customer\View\View.resx">
+      <DependentUpon>View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PointOfSalesModule\Dashboard\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PointOfSalesModule\Login\LoginFrm.resx">
+      <DependentUpon>LoginFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PointOfSalesModule\Payment\Create\Create.resx">
+      <DependentUpon>Create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PointOfSalesModule\ServiceBooking\Create\Create.resx">
+      <DependentUpon>Create.cs</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="PointOfSalesModule\ServiceBooking\Create\Receipt.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="PointOfSalesModule\ServiceBooking\View\View.resx">
+      <DependentUpon>View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen\SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationModule\Startup\StartupConfiguration.resx">
+      <DependentUpon>StartupConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Configs\app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Macsauto.Domain.AccountingModule.Account.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.AccountingModule.AccountService.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.AccountingModule.FiscalYear.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.AccountingModule.IFiscalYearRepository.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.AccountingModule.IPeriodRepository.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.AccountingModule.JournalEntry.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.AccountingModule.JournalEntryItem.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.AccountingModule.Period.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.AccountingModule.SalesModuleIntegration.ProductCategoryAccount.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.Contract.IAutoGenerateCode.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.Contract.IJournalable.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.Contract.ITransaction.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.CardIssuer.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.CashPayment.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.CreditCardPayment.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.Customer.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.CustomerFactory.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.DebitCardPayment.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.ICustomerRepository.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.IInventoryRepository.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.IMembershipRegistrationRepository.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.IMerchandiseRepository.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.Inventory.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.IPaymentRepository.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.IPaymentService.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.IPointRedemptionRepository.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.IProductCategoryRepository.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.IProductRepository.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.IPurchaseOrderRepository.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.IServiceBookingRepository.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.IServiceCategoryRepository.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.IServiceOrderRepository.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.IServiceRepository.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.IStockMovementRepository.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.IStockTransferRepository.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.IStorageRepository.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.IUnitOfMeasurementRepository.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.IVehicleBrandRepository.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.IVehicleModelRepository.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.IVehicleRegistrationRepository.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.Membership.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.MembershipRegistration.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.Merchandise.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.Payment.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.PaymentService.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.PointRedemption.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.PointRedemptionItem.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.Product.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.ProductCategory.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.Promotion.AmountOff.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.Promotion.Condition.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.Promotion.OrderPromotion.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.Promotion.ProductDiscount.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.Promotion.Promotion.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.PurchaseOrder.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.PurchaseOrderItem.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.Service.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.ServiceBooking.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.ServiceBookingItem.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.ServiceCategory.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.ServiceOrder.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.ServiceOrderItem.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.ServiceOrderProduct.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.ServicePricing.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.StockMovement.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.StockMovementItem.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.StockTransfer.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.StockTransferItem.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.Storage.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.StoredInventory.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.UnitOfMeasurement.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.Vehicle.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.VehicleAlreadyRegisteredException.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.VehicleBrand.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.VehicleModel.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.SalesModule.VehicleRegistration.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.Shared.Address.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.Shared.City.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.Shared.Entity.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.Shared.ICityRepository.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.Shared.IProvinceRepository.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.Shared.Person.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.Shared.PersonName.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.Shared.Province.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.UserManagementModule.Branch.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.UserManagementModule.Employee.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.UserManagementModule.IBranchRepository.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.UserManagementModule.IEmployeeRepository.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.UserManagementModule.ITerminalRepository.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.UserManagementModule.IUserRepository.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.UserManagementModule.Terminal.datasource" />
+    <None Include="Properties\DataSources\Macsauto.Domain.UserManagementModule.User.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\Province.xls" />
+    <None Include="Resources\Province.xlsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Macsauto.Application\Macsauto.Application.csproj">
+      <Project>{45D84A1E-738B-4897-BA33-1CB059CE2D47}</Project>
+      <Name>Macsauto.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Macsauto.Domain\Macsauto.Domain.csproj">
+      <Project>{939B9085-D6B8-4D96-9763-73A737B396BC}</Project>
+      <Name>Macsauto.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Macsauto.Infrastructure.Crosscutting\Macsauto.Infrastructure.Crosscutting.csproj">
+      <Project>{A5CFE843-A5D7-4E99-81E2-6BD2AC20CC57}</Project>
+      <Name>Macsauto.Infrastructure.Crosscutting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Macsauto.Infrastructure\Macsauto.Infrastructure.csproj">
+      <Project>{D654ADD3-06F6-466C-AD22-DF18854506F0}</Project>
+      <Name>Macsauto.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Loading-2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IC491069.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IC491114.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add_Symbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Application_Blueprint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Application_Design.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apps.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Archive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blackboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blackboard_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blocknotes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blocknotes_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blocknotes_Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blueprint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blueprint_Blog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blueprint_Website.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bookmark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button_Back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button_Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button_FastForward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button_First.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button_Last.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button_Next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button_Play_Pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button_Rec.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button_Rewind.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button_Shuffle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button_Stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button_Sync.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button_Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chart_Bar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chart_Bar_3D_Ascending.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chart_Bar_3D_Descending.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chart_Bar_Big.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chart_Bar_Document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chart_Bar_Files.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chart_Bar_Files_Wide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chart_Bar_Table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chart_Graph.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chart_Graph_Ascending.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chart_Graph_Descending.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chart_Pie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chart_Vertical_Bar_Poll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Checkmark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ClapBoard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clipboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clipboard_Empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clipboard_Full.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clipboard_Full_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Colors.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Comment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Comment_Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Comment_Bubble.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Comment_Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Comment_Reply.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Conversation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dashboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Denided.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Error_Symbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fav.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fav_Empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_AI_Illustrator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_BMP_Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_Checked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_Content.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_CSS_Stylesheet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_Doc_Text_Word.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_HTML.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_JPG_Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_List.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_MPMusic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_PDF_Acrobat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_PHP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_PNG_Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_PSD_Photoshop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_Table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_Text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_Warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_XLS_Excel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_ZIP_Archive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Files.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Files_Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder_Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder_Chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder_Checked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder_Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder_Empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder_Favorites.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder_Info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder_Network.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder_Remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder_Sync.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder_Upload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder_Warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iMac.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Info_Light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Location.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MacBook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MacBookAir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MacBookPro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail_Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail_Compose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail_Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail_Gmail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail_Info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail_Old.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail_Open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail_Reply.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail_Verified.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail_Warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MailBox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mails.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\News.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pencil_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Project.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Project_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rating.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sticky.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Target.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trash_Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trash_Full.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trash_Warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Valid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle.xlsx" />
+    <None Include="Resources\Warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window_App.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window_App_3Cols.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window_App_Header.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window_App_List.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window_App_ListView.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window_App_Results.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window_App_Sidebar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window_App_SplitScreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window_App_Splitscreen_3Columns.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window_App_View.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window_Config.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window_Generic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window_Sidebar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Windows.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Windows8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wooden_Box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wooden_Box2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zoom_In.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zoom_Out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="DevComponents.Instrumentation">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.DataVisualization">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.ProcessingObjectModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ConfigurationModule\Employee\User\" />
+    <Folder Include="ManagementModule\PettyCash\Add\" />
+    <Folder Include="ManagementModule\PettyCash\View\" />
+    <Folder Include="PointOfSalesModule\PointRedemption\" />
+    <Folder Include="PointOfSalesModule\ServiceOrder\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MAI-Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MAI-Maskot.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>cd $(ProjectDir)Resources
+copy Province.xlsx ..\$(OutDir)
+copy Vehicle.xlsx ..\$(OutDir)</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

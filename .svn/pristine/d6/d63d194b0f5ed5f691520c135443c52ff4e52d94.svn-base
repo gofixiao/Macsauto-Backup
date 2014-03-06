@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<repositories>
+  <repository path="..\Macsauto.Domain.Test\packages.config" />
+  <repository path="..\Macsauto.Infrastructure.Crosscutting\packages.config" />
+  <repository path="..\Macsauto.Infrastructure.NHibernate\packages.config" />
+  <repository path="..\Macsauto.Infrastructure.NHibernateRepository.Test\packages.config" />
+  <repository path="..\Macsauto.Infrastructure.Test\packages.config" />
+  <repository path="..\Macsauto.Infrastructure\packages.config" />
+  <repository path="..\Macsauto.Presentation.Winform\packages.config" />
+  <repository path="..\Macsauto.Presentation.WPF\packages.config" />
+  <repository path="..\Macsauto.Presentation\packages.config" />
+</repositories>
