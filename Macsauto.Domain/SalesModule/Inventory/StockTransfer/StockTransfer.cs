@@ -1,19 +1,16 @@
-﻿namespace Macsauto.Domain.SalesModule
-{
-    using System;
-    using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+
+namespace Macsauto.Domain.SalesModule
+{    
     using Macsauto.Domain.Contract;
     using Macsauto.Domain.Shared;
 
-    public class StockTransfer : Entity, IAutoGenerateCode
+    public class StockTransfer : Entity
     {
         private string _referenceDocument;
         private string _movementRemark;
         private IList<StockTransferItem> _stockTransferItems;
-
-        protected StockTransfer()
-        {
-        }
 
         public StockTransfer(string movementRemark, string referenceDocument = null)
         {
@@ -51,6 +48,13 @@
             to.Store(inventory, quantity);
 
             _stockTransferItems.Add(new StockTransferItem(inventory, from, to, quantity));
+        }
+
+        public override string GenerateNewCode<T>(IRepository<T> repository)
+        {
+            return string.Format(@"TRF/{0:yyMMdd}/{1:000}",
+                    DateTime.Now,
+                    repository.GetLastDailyIndex() + 1);
         }
     }
 }

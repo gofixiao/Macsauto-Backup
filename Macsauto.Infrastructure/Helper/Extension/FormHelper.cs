@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Linq;
-using DevComponents.DotNetBar.SuperGrid;
-using DevComponents.DotNetBar.SuperGrid.Style;
 
 namespace Macsauto.Infrastructure.Helper.Extension
 {
@@ -68,18 +66,6 @@ namespace Macsauto.Infrastructure.Helper.Extension
                     }
                 }   
             }
-        }
-
-        public static void Init(this GridPanel panel)
-        {
-            panel.ShowTreeButtons = true;
-            panel.ShowTreeLines = true;
-            panel.RowHeaderWidth = 40;
-            panel.DefaultRowHeight = 0;
-            panel.ColumnHeader.RowHeight = 30;
-
-            panel.DefaultVisualStyles.CellStyles.Default.Alignment = Alignment.MiddleCenter;
-            panel.DefaultVisualStyles.ColumnHeaderStyles.Default.Alignment = Alignment.MiddleCenter;
         }
 
         public static void ShowError(this Control control, string errorMsg)

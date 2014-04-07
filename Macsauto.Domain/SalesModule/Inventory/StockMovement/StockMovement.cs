@@ -1,20 +1,17 @@
-﻿namespace Macsauto.Domain.SalesModule
+﻿using System;
+using System.Collections.Generic;
+
+namespace Macsauto.Domain.SalesModule
 {
-    using System.Collections.Generic;
     using Macsauto.Domain.Contract;
     using Macsauto.Domain.Shared;
 
-    public class StockMovement : Entity, IAutoGenerateCode
+    public class StockMovement : Entity
     {
         private StockMovementType _type;
         private string _reference;
         private string _remark;
         private IList<StockMovementItem> _stockMovementItems;
-
-        protected StockMovement()
-        {
-            
-        }
 
         public StockMovement(StockMovementType type)
         {
@@ -76,6 +73,14 @@
             }
 
             _stockMovementItems.Add(new StockMovementItem(this, inventory, storage, quantity));
+        }
+
+        public override string GenerateNewCode<T>(IRepository<T> repository)
+        {
+            return string.Format(@"MVM/{0}/{1:yyMMdd}/{2:000}",
+                    (int)Type,
+                    DateTime.Now,
+                    repository.GetLastDailyIndex() + 1);
         }
     }
 }

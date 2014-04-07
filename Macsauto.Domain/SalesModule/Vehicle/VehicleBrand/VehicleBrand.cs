@@ -2,17 +2,21 @@
 {
     using Macsauto.Domain.Shared;
 
+    /// <summary>
+    /// Represents an actual vehicle brand / dealer
+    /// Examples : Toyota, Honda, Daihatsu
+    /// </summary>
     public class VehicleBrand : Entity
     {
         private string _name;
 
-        protected VehicleBrand()
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="code"></param>
+        /// <param name="name"></param>
+        public VehicleBrand(string code, string name) : base(code)
         {
-        }
-
-        public VehicleBrand(string code, string name)
-        {
-            _code = code;
             _name = name;
         }
 

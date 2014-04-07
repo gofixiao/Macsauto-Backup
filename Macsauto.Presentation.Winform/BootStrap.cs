@@ -1,13 +1,11 @@
-﻿using Macsauto.Infrastructure.Crosscutting;
+﻿using Autofac;
+using System;
+using System.ComponentModel;
 
 namespace Macsauto.Presentation.WinForm
 {
-    using System;
-    using System.ComponentModel;
-
-    using Autofac;
-
     using Macsauto.Infrastructure;
+    using Macsauto.Infrastructure.Crosscutting;
     using Macsauto.Infrastructure.Helper.Extension;
 
     public static class BootStrap
@@ -24,7 +22,11 @@ namespace Macsauto.Presentation.WinForm
             {
                 _builder = new ContainerBuilder();
 
-                _builder.RegisterModule(new InfrastructureModule(25000));
+                _builder.RegisterModule(new InfrastructureModule(25000, new[]
+                {
+                    @"Server=127.0.0.1;Database=macsauto2;User Id=root;Password=root",
+                    @"Server=codebrosdb.c7n7mt4zucyl.ap-southeast-1.rds.amazonaws.com;User Id=codebros;Password=codebros"
+                }));
                 _builder.RegisterModule(new InfrastructureCrosscuttingModule());
                 _builder.RegisterModule(new PresentationModule());
 

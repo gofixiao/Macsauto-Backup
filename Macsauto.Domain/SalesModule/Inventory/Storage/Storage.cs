@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Macsauto.Domain.Contract;
 using Macsauto.Domain.Shared;
 
 namespace Macsauto.Domain.SalesModule
@@ -11,13 +12,8 @@ namespace Macsauto.Domain.SalesModule
         private string _description;
         private IList<StoredInventory> _storedInventories;
 
-        protected Storage()
-        {
-        }
-
         public Storage(string code, string name, string description)
         {
-            _code = code;
             _name = name;
             _description = description;
             _storedInventories = new List<StoredInventory>();
@@ -72,6 +68,11 @@ namespace Macsauto.Domain.SalesModule
             var storedInventory = _storedInventories.FirstOrDefault(x => x.Inventory.Id == inventory.Id);
 
             return storedInventory == null ? 0 : storedInventory.Stock;
+        }
+
+        public override string GenerateNewCode<T>(IRepository<T> repository)
+        {
+            return 
         }
     }
 }

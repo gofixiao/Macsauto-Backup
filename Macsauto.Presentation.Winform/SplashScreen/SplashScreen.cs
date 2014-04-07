@@ -77,13 +77,6 @@ namespace Macsauto.Presentation.WinForm
 
                 _container = BootStrap.Strap();
 
-                worker.ReportProgress(30, @"Creating local session..");
-
-                NHibernateSessionManager.SetConnectionStrings(@"Server=codebrosdb.c7n7mt4zucyl.ap-southeast-1.rds.amazonaws.com;User Id=codebros;Password=codebros");
-                NHibernateSessionManager.GetLocalSession();
-
-                worker.ReportProgress(40, @"Creating branch sessions..");
-
                 //NHibernateSessionManager.InitializeBranchSession();
 
                 worker.ReportProgress(50, @"All sessions created");

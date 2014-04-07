@@ -5,11 +5,12 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{45D84A1E-738B-4897-BA33-1CB059CE2D47}</ProjectGuid>
+    <ProjectGuid>{C278B1FD-F135-4C96-A907-163E1A6AC2C5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Macsauto.Application</RootNamespace>
-    <AssemblyName>Macsauto.Application</AssemblyName>
+    <RootNamespace>Macsauto.Domain.Sales</RootNamespace>
+    <AssemblyName>Macsauto.Domain.Sales</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -29,41 +30,13 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
-    <PlatformTarget>x86</PlatformTarget>
-    <OutputPath>bin\x86\Debug\</OutputPath>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
-    <PlatformTarget>x86</PlatformTarget>
-    <OutputPath>bin\x86\Release\</OutputPath>
-  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="NHibernate">
-      <HintPath>..\packages\NHibernate.3.3.3.4001\lib\Net35\NHibernate.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Login\LoginInfo.cs" />
-    <Compile Include="Login\LoginService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Macsauto.Application.Contract\Macsauto.Application.Contract.csproj">
-      <Project>{41C93ECD-1CFE-43CA-8C44-A1C9C9705D06}</Project>
-      <Name>Macsauto.Application.Contract</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Macsauto.Domain\Macsauto.Domain.csproj">
-      <Project>{939B9085-D6B8-4D96-9763-73A737B396BC}</Project>
-      <Name>Macsauto.Domain</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Macsauto.Infrastructure\Macsauto.Infrastructure.csproj">
-      <Project>{D654ADD3-06F6-466C-AD22-DF18854506F0}</Project>
-      <Name>Macsauto.Infrastructure</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -9,15 +9,10 @@ namespace Macsauto.Infrastructure.NHibernate.MapsAndRepositories.Address
     public class CityRepository : NHibernateRepository<City>, ICityRepository
     {
         private readonly IRepository<City> _repo; 
-        private readonly ITransactionalRepository<City> _transactionalRepo;
  
-        public CityRepository(
-            IRepository<City> repo, 
-            ITransactionalRepository<City> transactionalRepo) 
-            : base(repo, transactionalRepo)
+        public CityRepository(IRepository<City> repo) : base(repo)
         {
             _repo = repo;
-            _transactionalRepo = transactionalRepo;
         }
 
         public City FindByName(string cityName)

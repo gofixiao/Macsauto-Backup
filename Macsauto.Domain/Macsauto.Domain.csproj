@@ -54,8 +54,6 @@
     <Compile Include="AccountingModule\Period\Period.cs" />
     <Compile Include="AccountingModule\SalesModuleIntegration\ProductCategoryAccount.cs" />
     <Compile Include="Contract\IJournalable.cs" />
-    <Compile Include="Contract\IAutoGenerateCode.cs" />
-    <Compile Include="SalesModule\Customer\CustomerFactory.cs" />
     <Compile Include="SalesModule\Customer\Membership\IMembershipRegistrationRepository.cs" />
     <Compile Include="SalesModule\Customer\Membership\Membership.cs" />
     <Compile Include="SalesModule\Customer\Membership\MembershipRegistration.cs" />

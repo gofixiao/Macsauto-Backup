@@ -1,4 +1,5 @@
 using Macsauto.Infrastructure.Helper.Extension;
+using Macsauto.Infrastructure.NHibernate;
 using NHibernate;
 
 namespace Macsauto.Infrastructure.Crosscutting.Transaction
@@ -8,24 +9,25 @@ namespace Macsauto.Infrastructure.Crosscutting.Transaction
 	using Castle.DynamicProxy;
 
     public class TransactionInterceptor : IInterceptor
-	{
-		private readonly ISession _session;
-		private ITransaction _transaction;
-
-		public TransactionInterceptor (ISession session)
-		{
-			_session = session;
-		}
+    {
+        private ITransaction _transaction;
 
 		public void Intercept (IInvocation invocation)
 		{
+		    var sessionFactories = NHibernateSessionManager.SessionFactories;
 			var method = invocation.Method;
 			var isTransactionScoped = method.IsDecoratedBy(typeof(TransactionAttribute));
 
 			if (isTransactionScoped) {
-				_transaction = _session.Transaction.IsActive 
+			    foreach (var sessionFactory in sessionFactories)
+			    {
+			        var session = sessionFactory.GetSession();
+
+			        _transaction = sessionFactory.GetSession().Transaction.IsActive 
                                 ? _session.Transaction 
                                 : _session.BeginTransaction();
+			    }
+			    _transaction = _session.Transaction;
 
 				try {
 					invocation.Proceed();

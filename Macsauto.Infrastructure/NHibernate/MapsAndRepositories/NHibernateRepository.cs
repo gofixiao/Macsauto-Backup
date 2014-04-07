@@ -10,12 +10,10 @@ namespace Macsauto.Infrastructure.NHibernate.MapsAndRepositories
     public class NHibernateRepository<T> : Domain.Contract.IRepository<T> where T : Entity
     {
         private readonly IRepository<T> _repository;
-        private readonly ITransactionalRepository<T> _transactionalRepository; 
 
-        public NHibernateRepository(IRepository<T> repository, ITransactionalRepository<T> transactionalRepository)
+        public NHibernateRepository(IRepository<T> repository)
         {
             _repository = repository;
-            _transactionalRepository = transactionalRepository;
         }
 
         public long Count()
@@ -33,6 +31,11 @@ namespace Macsauto.Infrastructure.NHibernate.MapsAndRepositories
                                             );
 
             return _repository.Count(criteria);
+        }
+
+        public long GetLastMonthlyIndex()
+        {
+            throw new NotImplementedException();
         }
 
         public T FindById(object id)

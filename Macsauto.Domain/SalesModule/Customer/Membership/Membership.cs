@@ -1,7 +1,8 @@
-﻿namespace Macsauto.Domain.SalesModule
+﻿using System;
+using System.Globalization;
+
+namespace Macsauto.Domain.SalesModule
 {
-    using System;
-    using System.Globalization;
     using Macsauto.Domain.Contract;
     using Macsauto.Domain.Shared;
 
@@ -20,16 +21,6 @@
             _point = 0;
             _activeFrom = DateTime.Now;
             _activeTo = _activeFrom.Date.AddYears(1);
-
-            var randomTwoDigitNumber = @"";
-            var rand = new Random();
-
-            for (var i = 0; i < 2; i++)
-            {
-                randomTwoDigitNumber += rand.Next(0, 9).ToString(CultureInfo.InvariantCulture);
-            }
-
-            _code = randomTwoDigitNumber + DateTime.Now.ToString(@"ffssmmHHddMMyy");
         }
 
         public virtual long Point
@@ -129,6 +120,19 @@
         public virtual void UsePoint(long point = 1)
         {
             _point -= point;
+        }
+
+        public override string GenerateNewCode<T>(IRepository<T> repository)
+        {
+            var randomTwoDigitNumber = @"";
+            var rand = new Random();
+
+            for (var i = 0; i < 2; i++)
+            {
+                randomTwoDigitNumber += rand.Next(0, 9).ToString(CultureInfo.InvariantCulture);
+            }
+
+            return randomTwoDigitNumber + DateTime.Now.ToString(@"ffssmmHHddMMyy");
         }
     }
 }

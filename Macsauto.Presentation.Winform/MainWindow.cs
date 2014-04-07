@@ -54,7 +54,6 @@ namespace Macsauto.Presentation.WinForm
                     Style = eDotNetBarStyle.Office2003,
                     Text = menu.Text,
                     TextAlignment = eButtonTextAlignment.Left,
-                    TextColor = Color.Black,
                     ThemeAware = false
                 }))
             {

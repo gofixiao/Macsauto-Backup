@@ -32,6 +32,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Macsauto.Presentation.WinFo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Macsauto.Presentation.Web", "Macsauto.Presentation.Web\Macsauto.Presentation.Web.csproj", "{1DB1373A-A241-4000-A67D-FFB2E9AE9178}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{A55BC00D-3E01-4F46-A00C-EC6EF0125AF1}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Macsauto.Application.Contract", "Macsauto.Application.Contract\Macsauto.Application.Contract.csproj", "{41C93ECD-1CFE-43CA-8C44-A1C9C9705D06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Macsauto.Domain.Sales", "Macsauto.Domain.Sales\Macsauto.Domain.Sales.csproj", "{C278B1FD-F135-4C96-A907-163E1A6AC2C5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -130,6 +141,26 @@ Global
 		{1DB1373A-A241-4000-A67D-FFB2E9AE9178}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{1DB1373A-A241-4000-A67D-FFB2E9AE9178}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{1DB1373A-A241-4000-A67D-FFB2E9AE9178}.Release|x86.ActiveCfg = Release|Any CPU
+		{41C93ECD-1CFE-43CA-8C44-A1C9C9705D06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41C93ECD-1CFE-43CA-8C44-A1C9C9705D06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41C93ECD-1CFE-43CA-8C44-A1C9C9705D06}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{41C93ECD-1CFE-43CA-8C44-A1C9C9705D06}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{41C93ECD-1CFE-43CA-8C44-A1C9C9705D06}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{41C93ECD-1CFE-43CA-8C44-A1C9C9705D06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41C93ECD-1CFE-43CA-8C44-A1C9C9705D06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41C93ECD-1CFE-43CA-8C44-A1C9C9705D06}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{41C93ECD-1CFE-43CA-8C44-A1C9C9705D06}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{41C93ECD-1CFE-43CA-8C44-A1C9C9705D06}.Release|x86.ActiveCfg = Release|Any CPU
+		{C278B1FD-F135-4C96-A907-163E1A6AC2C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C278B1FD-F135-4C96-A907-163E1A6AC2C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C278B1FD-F135-4C96-A907-163E1A6AC2C5}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{C278B1FD-F135-4C96-A907-163E1A6AC2C5}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{C278B1FD-F135-4C96-A907-163E1A6AC2C5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C278B1FD-F135-4C96-A907-163E1A6AC2C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C278B1FD-F135-4C96-A907-163E1A6AC2C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C278B1FD-F135-4C96-A907-163E1A6AC2C5}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{C278B1FD-F135-4C96-A907-163E1A6AC2C5}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{C278B1FD-F135-4C96-A907-163E1A6AC2C5}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -140,7 +171,9 @@ Global
 		{A5CFE843-A5D7-4E99-81E2-6BD2AC20CC57} = {D25E92DD-933A-43BC-A2CE-3DD123632B41}
 		{939B9085-D6B8-4D96-9763-73A737B396BC} = {EC9C4EB2-4F90-4609-8E79-6BC811609A50}
 		{CCFEB7FE-B126-4DF6-A81B-6E25C44A0C80} = {EC9C4EB2-4F90-4609-8E79-6BC811609A50}
+		{C278B1FD-F135-4C96-A907-163E1A6AC2C5} = {EC9C4EB2-4F90-4609-8E79-6BC811609A50}
 		{45D84A1E-738B-4897-BA33-1CB059CE2D47} = {5D4C2B77-20A0-466D-AD6C-FE1DA4C45FA4}
+		{41C93ECD-1CFE-43CA-8C44-A1C9C9705D06} = {5D4C2B77-20A0-466D-AD6C-FE1DA4C45FA4}
 		{FC9BF7A0-B0A7-4054-9350-6FEC722EFA29} = {132847D1-B7D8-4FAA-AFDF-4E1E907575A1}
 		{1DB1373A-A241-4000-A67D-FFB2E9AE9178} = {132847D1-B7D8-4FAA-AFDF-4E1E907575A1}
 	EndGlobalSection

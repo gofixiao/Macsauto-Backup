@@ -2,17 +2,34 @@
 {
     using System;
 
+    /// <summary>
+    /// Base class of all person type classes
+    /// </summary>
     public abstract class Person : Entity
     {
         private PersonName _name;
 
+        /// <summary>
+        /// Constructor
+        /// 
+        /// Required by NHibernate
+        /// </summary>
         protected Person() { }
 
+        /// <summary>
+        /// Constructor
+        /// 
+        /// Create a basic person
+        /// </summary>
+        /// <param name="name">Person's name</param>
         protected Person(PersonName name)
         {
             _name = name;
         }
 
+        /// <summary>
+        /// Person's name
+        /// </summary>
         public virtual PersonName Name
         {
             get { return _name; }

@@ -1,79 +1,119 @@
 ﻿using System;
-using Macsauto.Domain.UserManagementModule;
+using Macsauto.Domain.Contract;
 
 namespace Macsauto.Domain.Shared
 {
+    using Macsauto.Domain.UserManagementModule;
+
+    /// <summary>
+    /// Base entity
+    /// All class that has an id and a code must be inherited from this.
+    /// </summary>
     public abstract class Entity
     {
-        #region Members
-
-        //ReSharper disable InconsistentNaming
-
-        protected Guid? _id;
-        protected DateTime _createdOn;
-        protected DateTime? _updatedOn;
-        protected string _code;
-
-        //Resharper resume InconsistentNaming
-
-        #endregion
+        private string _code;
+        private DateTime _createdOn;
+        private DateTime _updatedOn;
 
         #region Properties
 
-        public virtual Guid? Id
-        {
-            get { return _id; }
-            protected set { _id = value; }
-        }
+        /// <summary>
+        /// Entity's primary ID
+        /// </summary>
+        public virtual Guid Id { get; protected set; }
 
+        /// <summary>
+        /// A human readable ID
+        /// </summary>
         public virtual string Code
         {
             get { return _code; }
-            set { _code = value; }
+            protected set { _code = value; }
         }
 
+        /// <summary>
+        /// Entity creation timestamp
+        /// </summary>
         public virtual DateTime CreatedOn
         {
             get { return _createdOn; }
             protected set { _createdOn = value; }
         }
 
-        public virtual DateTime? UpdatedOn
+        /// <summary>
+        /// Entity last update timestamp
+        /// </summary>
+        public virtual DateTime UpdatedOn
         {
             get { return _updatedOn; }
-            set { _updatedOn = value; }
+            protected set { _updatedOn = value; }
         }
 
+        /// <summary>
+        /// Entity deletion timestamp
+        /// </summary>
+        public virtual DateTime? RemovedOn { get; set; }
+
+        /// <summary>
+        /// Entity creator
+        /// </summary>
         public virtual Employee CreatedBy { get; set; }
 
+        /// <summary>
+        /// Entity updater
+        /// </summary>
         public virtual Employee UpdatedBy { get; set; }
+
+        /// <summary>
+        /// Entity remover
+        /// </summary>
+        public virtual Employee RemovedBy { get; set; }
 
         #endregion
 
         #region Constructor
 
-        protected Entity()
+        /// <summary>
+        /// Base constructor
+        /// </summary>
+        protected Entity(string code)
         {
+            _code = code;
             _createdOn = DateTime.Now;
+            _updatedOn = DateTime.Now;
         }
 
         #endregion
 
         #region Methods (Public)
 
-        public virtual bool IsTransient()
+        /// <summary>
+        /// Check whether the entity has been removed
+        /// </summary>
+        /// <returns>True if entity is removed, otherwise false</returns>
+        public virtual bool IsRemoved()
         {
-            return _id == null;
+            return RemovedOn != null;
         }
 
-        public virtual void GenerateNewGuidId()
+        /// <summary>
+        /// Check whether the entity has an ID assigned
+        /// </summary>
+        /// <returns>True if entity has an ID, otherwise false</returns>
+        public virtual bool IsTransient()
         {
-            if (!IsTransient())
-            {
-                throw new ApplicationException("Cannot assign new id to non-transient entity");
-            }
+            return Id == null;
+        }
+        
+        /// <summary>
+        /// Mark an entity as removed
+        /// </summary>
+        /// <returns>The removed entity</returns>
+        public virtual Entity Delete()
+        {
+            RemovedOn = DateTime.Now;
 
-            _id = Guid.NewGuid();
+            return this;
         }
 
         #endregion

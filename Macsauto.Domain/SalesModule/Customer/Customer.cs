@@ -1,8 +1,10 @@
-﻿namespace Macsauto.Domain.SalesModule
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Macsauto.Domain.SalesModule
+{    
+    using Macsauto.Domain.Contract;
     using Macsauto.Domain.Shared;
 
     public class Customer : Person
@@ -11,14 +13,8 @@
         private Membership _membership;
         private IList<VehicleRegistration> _vehicleRegistrations;
 
-        protected Customer()
+        public Customer(PersonName name, string cellPhone) : base(name)
         {
-        }
-
-        public Customer(string code, PersonName name, string cellPhone)
-            : base(name)
-        {
-            _code = code;
             _cellPhone = cellPhone;
             _vehicleRegistrations = new List<VehicleRegistration>();
         }
@@ -113,6 +109,13 @@
         public override string ToString()
         {
             return Name.Fullname;
+        }
+
+        public override string GenerateNewCode<T>(IRepository<T> repository)
+        {
+            return string.Format(@"CU{0:00}{1:000}", 
+                repository.GetLastMonthlyIndex() + 1,
+                repository.GetLastDailyIndex() + 1);
         }
     }
 }

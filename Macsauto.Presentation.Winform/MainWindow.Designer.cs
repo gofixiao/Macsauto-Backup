@@ -39,7 +39,6 @@
             this.galleryContainer1 = new DevComponents.DotNetBar.GalleryContainer();
             this.qatCustomizeItem1 = new DevComponents.DotNetBar.QatCustomizeItem();
             this.menuRibbon = new DevComponents.DotNetBar.RibbonControl();
-            this.applicationButton = new DevComponents.DotNetBar.ApplicationButton();
             this.itemContainer1 = new DevComponents.DotNetBar.ItemContainer();
             this.itemContainer2 = new DevComponents.DotNetBar.ItemContainer();
             this.itemContainer3 = new DevComponents.DotNetBar.ItemContainer();
@@ -136,10 +135,6 @@
             this.galleryContainer1.MultiLine = false;
             this.galleryContainer1.Name = "galleryContainer1";
             // 
-            // 
-            // 
-            this.galleryContainer1.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
             // qatCustomizeItem1
             // 
             this.qatCustomizeItem1.Name = "qatCustomizeItem1";
@@ -155,9 +150,7 @@
             this.menuRibbon.Location = new System.Drawing.Point(0, 0);
             this.menuRibbon.Name = "menuRibbon";
             this.menuRibbon.Padding = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.menuRibbon.QuickToolbarItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.qatCustomizeItem1,
-            this.applicationButton});
+            
             this.menuRibbon.Size = new System.Drawing.Size(1008, 25);
             this.menuRibbon.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.menuRibbon.SystemText.MaximizeRibbonText = "&Maximize the Ribbon";
@@ -179,20 +172,6 @@
             this.menuRibbon.TabIndex = 4;
             this.menuRibbon.Text = "ribbonControl1";
             // 
-            // applicationButton
-            // 
-            this.applicationButton.AutoExpandOnClick = true;
-            this.applicationButton.CanCustomize = false;
-            this.applicationButton.HotTrackingStyle = DevComponents.DotNetBar.eHotTrackingStyle.Image;
-            this.applicationButton.Image = ((System.Drawing.Image)(resources.GetObject("applicationButton.Image")));
-            this.applicationButton.ImagePaddingHorizontal = 2;
-            this.applicationButton.ImagePaddingVertical = 2;
-            this.applicationButton.Name = "applicationButton";
-            this.applicationButton.ShowSubItems = false;
-            this.applicationButton.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.itemContainer1});
-            this.applicationButton.Text = "&File";
-            // 
             // itemContainer1
             // 
             // 
@@ -206,10 +185,6 @@
             this.itemContainer2,
             this.itemContainer4});
             // 
-            // 
-            // 
-            this.itemContainer1.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
             // itemContainer2
             // 
             // 
@@ -222,10 +197,6 @@
             this.itemContainer2.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.itemContainer3,
             this.galleryContainer2});
-            // 
-            // 
-            // 
-            this.itemContainer2.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // itemContainer3
             // 
@@ -244,10 +215,6 @@
             this.buttonItem5,
             this.buttonItem6,
             this.buttonItem7});
-            // 
-            // 
-            // 
-            this.itemContainer3.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // buttonItem2
             // 
@@ -319,10 +286,6 @@
             this.buttonItem10,
             this.buttonItem11});
             // 
-            // 
-            // 
-            this.galleryContainer2.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
             // labelItem8
             // 
             this.labelItem8.BorderSide = DevComponents.DotNetBar.eBorderSide.Bottom;
@@ -367,10 +330,6 @@
             this.itemContainer4.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.buttonItem12,
             this.buttonItem13});
-            // 
-            // 
-            // 
-            this.itemContainer4.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // buttonItem12
             // 
@@ -447,7 +406,6 @@
         private System.Windows.Forms.TreeView treeMenu;
         private DevComponents.DotNetBar.GalleryContainer galleryContainer1;
         private DevComponents.DotNetBar.QatCustomizeItem qatCustomizeItem1;
-        private DevComponents.DotNetBar.ApplicationButton applicationButton;
         private DevComponents.DotNetBar.ItemContainer itemContainer1;
         private DevComponents.DotNetBar.ItemContainer itemContainer2;
         private DevComponents.DotNetBar.ItemContainer itemContainer3;
