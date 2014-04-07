@@ -3,7 +3,6 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Windows.Forms;
-    using Macsauto.Domain.UserManagementModule;
     using Macsauto.Domain.SalesModule;
     using Macsauto.Presentation.WinForm.ConfigurationModule.Inventory;
 
@@ -11,7 +10,7 @@
     {
         private readonly ViewAllPresenter _presenter;
         private readonly IFormFactory _formFactory;
-        private IList<Branch> _branches;
+        private IList<Domain.Branch> _branches;
 
         public ViewAll(ViewAllPresenter presenter, IFormFactory formFactory)
         {
@@ -23,7 +22,7 @@
             _presenter.SetForm(this);
         }
 
-        public IList<Branch> Branches
+        public IList<Domain.Branch> Branches
         {
             get { return _branches; }
             set

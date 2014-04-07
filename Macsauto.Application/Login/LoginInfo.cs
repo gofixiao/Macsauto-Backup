@@ -1,9 +1,8 @@
 ﻿using System;
+using Macsauto.Domain;
 
 namespace Macsauto.Application.Login
 {
-    using Macsauto.Domain.UserManagementModule;
-
     /// <summary>
     /// Static class that holds the logged in user information, as well as another login related information
     /// </summary>

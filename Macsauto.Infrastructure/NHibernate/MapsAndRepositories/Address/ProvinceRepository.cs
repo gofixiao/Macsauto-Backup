@@ -1,8 +1,8 @@
-﻿using NHibernate.Criterion;
+﻿using Macsauto.Domain;
+using NHibernate.Criterion;
 
 namespace Macsauto.Infrastructure.NHibernate.MapsAndRepositories.Address
 {
-    using Macsauto.Domain.Shared;
     using Macsauto.Infrastructure.NHibernate.Contract;
 
     public class ProvinceRepository : NHibernateRepository<Province>, IProvinceRepository

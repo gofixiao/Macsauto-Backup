@@ -1,6 +1,6 @@
 ﻿namespace Macsauto.Infrastructure.NHibernate.MapsAndRepositories.Employee
 {
-    public class EmployeeMap : EntityMap<Domain.UserManagementModule.Employee>
+    public class EmployeeMap : EntityMap<Domain.Employee>
     {
         public EmployeeMap()
         {

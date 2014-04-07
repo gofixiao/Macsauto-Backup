@@ -1,11 +1,12 @@
-﻿namespace Macsauto.Presentation.WinForm.ManagementModule.Customer
+﻿using Macsauto.Domain;
+
+namespace Macsauto.Presentation.WinForm.ManagementModule.Customer
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Windows.Forms;
     using Macsauto.Domain.SalesModule;
-    using Macsauto.Domain.Shared;
     using Macsauto.Infrastructure.Helper.Extension;
 
     public partial class Add : Form

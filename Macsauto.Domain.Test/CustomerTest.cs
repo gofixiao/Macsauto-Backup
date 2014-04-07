@@ -5,7 +5,6 @@
     using ObjectDumper;
 
     using Macsauto.Domain.SalesModule;
-    using Macsauto.Domain.Shared;
 
     [TestFixture]
     public class CustomerTest

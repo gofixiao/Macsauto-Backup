@@ -1,9 +1,9 @@
 ﻿using System;
+using Macsauto.Domain;
 
 namespace Macsauto.Application.Login
 {
     using Macsauto.Application.Contract;
-    using Macsauto.Domain.UserManagementModule;
     using Macsauto.Infrastructure.Helper.Hasher.Contract;
 
     public class LoginService : ILoginService

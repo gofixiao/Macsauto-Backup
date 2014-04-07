@@ -5,7 +5,6 @@ namespace Macsauto.Infrastructure.Helper.Extension
 {
     using System.Collections.Generic;
     using System.Windows.Forms;
-    using Macsauto.Domain.Shared;
 
     public static class FormHelper
     {

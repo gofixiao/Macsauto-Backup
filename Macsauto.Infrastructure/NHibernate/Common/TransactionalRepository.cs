@@ -1,10 +1,10 @@
-﻿using NHibernate;
+﻿using Macsauto.Domain;
+using NHibernate;
 using NHibernate.Criterion;
 
 namespace Macsauto.Infrastructure.NHibernate.Common
 {
     using Macsauto.Domain.Contract;
-    using Macsauto.Domain.Shared;
     using Macsauto.Infrastructure.NHibernate.Contract;
 
     public class TransactionalRepository <TEntity> : ITransactionalRepository<TEntity>

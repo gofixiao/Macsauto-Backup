@@ -1,6 +1,6 @@
 ﻿namespace Macsauto.Infrastructure.NHibernate.MapsAndRepositories.Branch
 {
-    public class BranchMap : EntityMap<Domain.UserManagementModule.Branch>
+    public class BranchMap : EntityMap<Domain.Branch>
     {
         public BranchMap()
         {

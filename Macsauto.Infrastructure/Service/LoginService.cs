@@ -1,7 +1,8 @@
-﻿namespace Macsauto.Infrastructure.Service
+﻿using Macsauto.Domain;
+
+namespace Macsauto.Infrastructure.Service
 {
     using System;
-    using Macsauto.Domain.UserManagementModule;
     using Macsauto.Infrastructure.Helper.Extension;
     using Macsauto.Infrastructure.Helper.Client;
     using Macsauto.Infrastructure.NHibernate;

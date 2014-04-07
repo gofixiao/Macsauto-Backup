@@ -1,7 +1,7 @@
-﻿namespace Macsauto.Presentation.WinForm.ConfigurationModule.Branch
+﻿using Macsauto.Domain;
+
+namespace Macsauto.Presentation.WinForm.ConfigurationModule.Branch
 {
-    using Macsauto.Domain.Shared;
-    using Macsauto.Domain.UserManagementModule;
     using Macsauto.Infrastructure.NHibernate;
     using Macsauto.Infrastructure.NHibernate.Common;
 
@@ -32,14 +32,14 @@
             _form.Cities = _cityRepo.GetWhereProvince(province);
         }
 
-        public Branch Save()
+        public Domain.Branch Save()
         {
-            Branch branch = null;
+            Domain.Branch branch = null;
             var session = NHibernateSessionManager.GetLocalSession();
 
             session.DoTransactional(sess => 
                 branch = _branchRepo.Insert(
-                    new Branch(
+                    new Domain.Branch(
                         _form.BranchCode,
                         _form.BranchName,
                         new Address(

@@ -1,4 +1,6 @@
-﻿namespace Macsauto.Presentation.WinForm.ManagementModule.Customer
+﻿using Macsauto.Domain;
+
+namespace Macsauto.Presentation.WinForm.ManagementModule.Customer
 {
     using System;
     using System.Windows.Forms;
@@ -7,7 +9,6 @@
     using Macsauto.Infrastructure.Connector.SmartCard.Reader;
     using Macsauto.Infrastructure.Service;
     using Macsauto.Domain.SalesModule;
-    using Macsauto.Domain.Shared;
     using Macsauto.Infrastructure.NHibernate;
     using Macsauto.Infrastructure.NHibernate.Common;
 

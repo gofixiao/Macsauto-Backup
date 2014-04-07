@@ -1,5 +1,5 @@
 ﻿using System;
-using Macsauto.Domain.Shared;
+using Macsauto.Domain;
 
 namespace Macsauto.Presentation.WinForm
 {

@@ -1,8 +1,6 @@
 ﻿namespace Macsauto.Infrastructure.NHibernate.MapsAndRepositories.User
 {
-    using Macsauto.Domain.UserManagementModule;
-
-    public class UserMap : EntityMap<User>
+    public class UserMap : EntityMap<Domain.User>
     {
         public UserMap()
         {

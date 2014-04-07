@@ -1,11 +1,11 @@
-﻿namespace Macsauto.Presentation.WinForm.ConfigurationModule.Branch
+﻿using Macsauto.Domain;
+
+namespace Macsauto.Presentation.WinForm.ConfigurationModule.Branch
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Windows.Forms;
-    using Macsauto.Domain.Shared;
-    using Macsauto.Domain.UserManagementModule;
     using Macsauto.Infrastructure.Helper.Extension;
 
     public partial class Add : Form
@@ -14,7 +14,7 @@
         private IList<Province> _provinces;
         private IList<City> _cities;
 
-        public EventHandler<FormTransactionSuccessArgs<Branch>> FormTransactionSuccess;
+        public EventHandler<FormTransactionSuccessArgs<Domain.Branch>> FormTransactionSuccess;
 
         public Add(AddPresenter presenter)
         {
@@ -98,12 +98,12 @@
             }
         }
 
-        protected virtual void OnFormTransactionSuccess(Branch branch, bool status)
+        protected virtual void OnFormTransactionSuccess(Domain.Branch branch, bool status)
         {
             var handler = FormTransactionSuccess;
 
             if (handler != null)
-                handler(this, new FormTransactionSuccessArgs<Branch>(branch, status));
+                handler(this, new FormTransactionSuccessArgs<Domain.Branch>(branch, status));
         }
 
         private void closeToolStripMenuItem_Click(object sender, EventArgs e)

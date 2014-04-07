@@ -1,11 +1,10 @@
-﻿using NHibernate.Event;
+﻿using Macsauto.Domain;
+using NHibernate.Event;
 using NHibernate.Persister.Entity;
 
 namespace Macsauto.Infrastructure.NHibernate.Common
 {
     using System;
-    using Macsauto.Domain.UserManagementModule;
-    using Macsauto.Domain.Shared;
     using Macsauto.Infrastructure.Service;
 
     public class EntityService : IPreInsertEventListener, IPreUpdateEventListener

@@ -2,8 +2,6 @@
 
 namespace Macsauto.Domain.Contract
 {
-    using Macsauto.Domain.Shared;
-
     /// <summary>
     /// Contract for all repository
     /// </summary>

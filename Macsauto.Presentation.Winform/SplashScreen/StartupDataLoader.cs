@@ -1,12 +1,12 @@
-﻿namespace Macsauto.Presentation.WinForm
+﻿using Macsauto.Domain;
+
+namespace Macsauto.Presentation.WinForm
 {
     using System;
     using System.IO;
     using System.Linq;
     using System.Windows.Forms;
     using Macsauto.Domain.SalesModule;
-    using Macsauto.Domain.Shared;
-    using Macsauto.Domain.UserManagementModule;
     using Macsauto.Infrastructure.NHibernate;
     using OfficeOpenXml;
 
@@ -48,7 +48,7 @@
                                 @"KAPUK"
                             )
                         ),
-                        Position.STOREMANAGER,
+                        Position.Storemanager,
                         new PersonName(@"SUPERADMIN"),
                         Gender.Male
                     ),

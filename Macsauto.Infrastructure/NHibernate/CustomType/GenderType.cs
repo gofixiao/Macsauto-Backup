@@ -1,4 +1,4 @@
-﻿using Macsauto.Domain.Shared;
+﻿using Macsauto.Domain;
 using NHibernate;
 using NHibernate.SqlTypes;
 using NHibernate.UserTypes;

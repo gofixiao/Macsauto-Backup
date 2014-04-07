@@ -1,7 +1,8 @@
-﻿namespace Macsauto.Presentation.WinForm.CustomArgs
+﻿using Macsauto.Domain;
+
+namespace Macsauto.Presentation.WinForm.CustomArgs
 {
     using System;
-    using Macsauto.Domain.Shared;
 
     public class FormSelectionArgs<T> : EventArgs where T : Entity
     {

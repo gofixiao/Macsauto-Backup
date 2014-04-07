@@ -1,9 +1,10 @@
-﻿namespace Macsauto.Presentation.WinForm.PointOfSalesModule.Login
+﻿using Macsauto.Domain;
+
+namespace Macsauto.Presentation.WinForm.PointOfSalesModule.Login
 {
     using System;
     using Macsauto.Infrastructure.Helper.Extension;
     using Macsauto.Infrastructure.Service;
-    using Macsauto.Domain.UserManagementModule;
 
     public class LoginPresenter
     {

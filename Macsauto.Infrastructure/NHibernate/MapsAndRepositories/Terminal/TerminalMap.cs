@@ -1,8 +1,6 @@
 ﻿namespace Macsauto.Infrastructure.NHibernate.MapsAndRepositories.Terminal
 {
-    using Macsauto.Domain.UserManagementModule;
-
-    public class TerminalMap : EntityMap<Terminal>
+    public class TerminalMap : EntityMap<Domain.Terminal>
     {
         public TerminalMap()
         {

@@ -1,8 +1,9 @@
-﻿namespace Macsauto.Presentation.WinForm.PointOfSalesModule.Login
+﻿using Macsauto.Domain;
+
+namespace Macsauto.Presentation.WinForm.PointOfSalesModule.Login
 {
     using System;
     using System.Windows.Forms;
-    using Macsauto.Domain.UserManagementModule;
     using Macsauto.Infrastructure.Helper.Extension;
 
     public partial class LoginFrm : Form

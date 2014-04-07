@@ -1,4 +1,5 @@
-﻿using NHibernate;
+﻿using Macsauto.Domain;
+using NHibernate;
 using NHibernate.Criterion;
 
 namespace Macsauto.Infrastructure.NHibernate.Common
@@ -7,7 +8,6 @@ namespace Macsauto.Infrastructure.NHibernate.Common
     using System.Globalization;
     using Macsauto.Domain.Contract;
     using Macsauto.Domain.SalesModule;
-    using Macsauto.Domain.Shared;
     using Macsauto.Infrastructure.Service;
 
     public class EntityCodeFactory

@@ -1,26 +1,26 @@
 ﻿using System.Collections.Generic;
+using Macsauto.Domain;
 using NHibernate.Criterion;
 
 namespace Macsauto.Infrastructure.NHibernate.MapsAndRepositories.Employee
 {
     using System;
-    using Macsauto.Domain.UserManagementModule;
     using Macsauto.Infrastructure.NHibernate.Contract;
 
-    public class EmployeeRepository : NHibernateRepository<Employee>, IEmployeeRepository
+    public class EmployeeRepository : NHibernateRepository<Domain.Employee>, IEmployeeRepository
     {
-        private readonly IRepository<Employee> _repo;
-        private readonly ITransactionalRepository<Employee> _transactionalRepo; 
+        private readonly IRepository<Domain.Employee> _repo;
+        private readonly ITransactionalRepository<Domain.Employee> _transactionalRepo; 
 
-        public EmployeeRepository(IRepository<Employee> repo, ITransactionalRepository<Employee> transactionalRepo) : base(repo, transactionalRepo)
+        public EmployeeRepository(IRepository<Domain.Employee> repo, ITransactionalRepository<Domain.Employee> transactionalRepo) : base(repo, transactionalRepo)
         {
             _repo = repo;
             _transactionalRepo = transactionalRepo;
         }
 
-        public Employee GetEmployeeByName(string name)
+        public Domain.Employee GetEmployeeByName(string name)
         {
-            var criteria = DetachedCriteria.For<Employee>()
+            var criteria = DetachedCriteria.For<Domain.Employee>()
                                            .Add(
                                                 Restrictions.Disjunction()
                                                 .Add(Restrictions.InsensitiveLike("Firstname", name, MatchMode.Anywhere))
@@ -31,14 +31,14 @@ namespace Macsauto.Infrastructure.NHibernate.MapsAndRepositories.Employee
             return _repo.FindFirst(criteria);
         }
 
-        public Employee Register(Employee employee)
+        public Domain.Employee Register(Domain.Employee employee)
         {
             return _transactionalRepo.Save(employee);
         }
 
-        public IList<Employee> GetAllInBranch(Branch branch)
+        public IList<Domain.Employee> GetAllInBranch(Domain.Branch branch)
         {
-            var criteria = DetachedCriteria.For<Employee>()
+            var criteria = DetachedCriteria.For<Domain.Employee>()
                                            .Add(Restrictions.Eq(@"Branch", branch));
 
             return _repo.FindAll(criteria);

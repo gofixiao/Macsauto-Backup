@@ -1,10 +1,10 @@
 ﻿using System;
+using Macsauto.Domain;
 using NHibernate.Criterion;
 
 namespace Macsauto.Infrastructure.NHibernate.MapsAndRepositories
 {
     using System.Collections.Generic;
-    using Macsauto.Domain.Shared;
     using Macsauto.Infrastructure.NHibernate.Contract;
 
     public class NHibernateRepository<T> : Domain.Contract.IRepository<T> where T : Entity

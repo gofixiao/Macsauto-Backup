@@ -1,14 +1,15 @@
-﻿namespace Macsauto.Presentation.WinForm.ConfigurationModule.Branch
+﻿using Macsauto.Domain;
+
+namespace Macsauto.Presentation.WinForm.ConfigurationModule.Branch
 {
     using System.Collections.Generic;
     using System.Windows.Forms;
-    using Macsauto.Domain.UserManagementModule;
 
     public partial class View : Form
     {
         private readonly ViewPresenter _presenter;
         private IList<Employee> _employees;
-        private Branch _branch;
+        private Domain.Branch _branch;
 
         public View(ViewPresenter presenter)
         {
@@ -19,7 +20,7 @@
             _presenter.SetForm(this);
         }
 
-        public Branch Branch
+        public Domain.Branch Branch
         {
             get { return _branch; }
             set

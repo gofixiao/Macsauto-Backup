@@ -1,11 +1,10 @@
-﻿using NHibernate.Criterion;
+﻿using Macsauto.Domain;
+using NHibernate.Criterion;
 using System;
 using System.Collections.Generic;
 
 namespace Macsauto.Infrastructure.NHibernate.Contract
-{    
-    using Macsauto.Domain.Shared;
-
+{
     /// <summary>
     /// Contract for all repository
     /// </summary>

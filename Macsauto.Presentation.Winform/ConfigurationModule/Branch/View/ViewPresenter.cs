@@ -1,7 +1,7 @@
-﻿namespace Macsauto.Presentation.WinForm.ConfigurationModule.Branch
-{
-    using Macsauto.Domain.UserManagementModule;
+﻿using Macsauto.Domain;
 
+namespace Macsauto.Presentation.WinForm.ConfigurationModule.Branch
+{
     public class ViewPresenter
     {
         private readonly IBranchRepository _branchRepo;

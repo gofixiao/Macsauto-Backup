@@ -1,11 +1,11 @@
-﻿using NHibernate.Engine;
+﻿using Macsauto.Domain;
+using NHibernate.Engine;
 using NHibernate.Id;
 
 namespace Macsauto.Infrastructure.NHibernate.MapsAndRepositories
 {
     using System;
     using FluentNHibernate.Mapping;
-    using Macsauto.Domain.Shared;
     using Macsauto.Infrastructure.Helper.Extension;
 
     public abstract class EntityMap<T> : ClassMap<T> where T : Entity

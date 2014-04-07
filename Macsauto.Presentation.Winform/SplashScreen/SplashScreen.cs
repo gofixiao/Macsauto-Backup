@@ -1,4 +1,5 @@
-﻿using Macsauto.Domain.SalesModule;
+﻿using Macsauto.Domain;
+using Macsauto.Domain.SalesModule;
 
 namespace Macsauto.Presentation.WinForm
 {
@@ -6,8 +7,6 @@ namespace Macsauto.Presentation.WinForm
     using System.ComponentModel;
     using System.Windows.Forms;
     using Autofac;
-    using Macsauto.Domain.Shared;
-    using Macsauto.Domain.UserManagementModule;
     using Macsauto.Infrastructure.NHibernate;
     using NHibernate;
 

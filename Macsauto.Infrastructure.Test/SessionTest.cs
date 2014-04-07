@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Macsauto.Domain;
 using Macsauto.Infrastructure.NHibernate.MapsAndRepositories.Service;
 using NHibernate;
 
@@ -9,8 +10,6 @@ namespace Macsauto.Infrastructure.Test
     using NHibernate;
     using NHibernate.Common;
     using Domain.SalesModule;
-    using Domain.Shared;
-    using Domain.UserManagementModule;
     using NHibernate.MapsAndRepositories.Customer;
     using NHibernate.MapsAndRepositories.Employee;
     using NHibernate.MapsAndRepositories.User;

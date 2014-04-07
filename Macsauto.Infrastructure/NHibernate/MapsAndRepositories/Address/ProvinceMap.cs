@@ -1,7 +1,7 @@
-﻿namespace Macsauto.Infrastructure.NHibernate.MapsAndRepositories.Address
-{
-    using Macsauto.Domain.Shared;
+﻿using Macsauto.Domain;
 
+namespace Macsauto.Infrastructure.NHibernate.MapsAndRepositories.Address
+{
     public class ProvinceMap : EntityMap<Province>
     {
         public ProvinceMap()

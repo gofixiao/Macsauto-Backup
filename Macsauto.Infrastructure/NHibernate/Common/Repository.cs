@@ -1,4 +1,5 @@
-﻿using NHibernate;
+﻿using Macsauto.Domain;
+using NHibernate;
 using NHibernate.Criterion;
 using System;
 using System.Collections.Generic;
@@ -6,7 +7,6 @@ using System.Collections.Generic;
 namespace Macsauto.Infrastructure.NHibernate.Common
 {
     using Macsauto.Infrastructure.NHibernate.Contract;
-    using Macsauto.Domain.Shared;
 
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : Entity
     {

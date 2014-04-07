@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
+using Macsauto.Domain;
 using NHibernate.Criterion;
 
 namespace Macsauto.Infrastructure.NHibernate.MapsAndRepositories.Address
 {
-    using Macsauto.Domain.Shared;
     using Macsauto.Infrastructure.NHibernate.Contract;
 
     public class CityRepository : NHibernateRepository<City>, ICityRepository
