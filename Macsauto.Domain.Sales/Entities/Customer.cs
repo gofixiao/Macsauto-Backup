@@ -2,15 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Macsauto.Domain.Sales.Customer
+namespace Macsauto.Domain.Sales.Entities
 {
-    using Macsauto.Domain.Sales.Customer.Membership;
-    using Macsauto.Domain.Sales.Vehicle;
-
     public class Customer : Person
     {
         private string _cellPhone;
-        private Membership.Membership _membership;
+        private Membership _membership;
         private IList<VehicleRegistration> _vehicleRegistrations;
 
         public Customer(PersonName name, string cellPhone) : base(name)
@@ -31,7 +28,7 @@ namespace Macsauto.Domain.Sales.Customer
 
         public virtual Address HomeAddress { get; set; }
 
-        public virtual Membership.Membership Membership
+        public virtual Membership Membership
         {
             get { return _membership; }
             protected set { _membership = value; }
@@ -70,12 +67,12 @@ namespace Macsauto.Domain.Sales.Customer
 
             var registration = new MembershipRegistration(this);
 
-            _membership = new Membership.Membership();
+            _membership = new Membership();
 
             return registration;
         }
 
-        public virtual PointRedemption.PointRedemption RedeemPoint(IList<Merchandise.Merchandise> merchandises, string remark = @"")
+        public virtual PointRedemption RedeemPoint(IList<Merchandise> merchandises, string remark = @"")
         {
             if (!IsInActiveMembership)
             {
@@ -89,7 +86,7 @@ namespace Macsauto.Domain.Sales.Customer
                 throw new ApplicationException(@"Not enough points, " + totalPointNeeded + @" needed");
             }
 
-            var pointRedemption = new PointRedemption.PointRedemption(this, remark);
+            var pointRedemption = new PointRedemption(this, remark);
 
             foreach (var merchandise in merchandises)
             {

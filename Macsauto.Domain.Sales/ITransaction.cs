@@ -1,6 +1,4 @@
-﻿using Macsauto.Domain.Sales.Customer;
-
-namespace Macsauto.Domain.Sales
+﻿namespace Macsauto.Domain.Sales
 {
 
     public interface ITransaction

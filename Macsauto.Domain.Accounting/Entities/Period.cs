@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using Macsauto.Domain.Accounting.Repositories;
 
 namespace Macsauto.Domain.Accounting.Entities
 {

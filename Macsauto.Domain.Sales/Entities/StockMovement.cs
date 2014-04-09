@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Macsauto.Domain.Sales.Inventory.StockMovement
+namespace Macsauto.Domain.Sales.Entities
 {
     public class StockMovement : Entity
     {
@@ -55,7 +55,7 @@ namespace Macsauto.Domain.Sales.Inventory.StockMovement
             protected set { _stockMovementItems = value; }
         }
 
-        public virtual void AddMovementItem(Inventory inventory, Storage.Storage storage, long quantity)
+        public virtual void AddMovementItem(Inventory inventory, Storage storage, long quantity)
         {
             foreach (var stockMovementItem in _stockMovementItems)
             {

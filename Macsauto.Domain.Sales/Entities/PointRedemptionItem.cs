@@ -1,16 +1,16 @@
-﻿namespace Macsauto.Domain.Sales.PointRedemption
+﻿namespace Macsauto.Domain.Sales.Entities
 {
     public class PointRedemptionItem : ValueObject<PointRedemptionItem>
     {
         private PointRedemption _pointRedemption;
-        private Merchandise.Merchandise _merchandise;
+        private Merchandise _merchandise;
         private long _quantity;
 
         protected PointRedemptionItem()
         {
         }
 
-        public PointRedemptionItem(PointRedemption pointRedemption, Merchandise.Merchandise merchandise, long quantity)
+        public PointRedemptionItem(PointRedemption pointRedemption, Merchandise merchandise, long quantity)
         {
             _pointRedemption = pointRedemption;
             _merchandise = merchandise;
@@ -23,7 +23,7 @@
             protected set { _pointRedemption = value; }
         }
 
-        public virtual Merchandise.Merchandise Merchandise
+        public virtual Merchandise Merchandise
         {
             get { return _merchandise; }
             protected set { _merchandise = value; }

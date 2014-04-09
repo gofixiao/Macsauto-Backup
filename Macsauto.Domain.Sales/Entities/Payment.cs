@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Macsauto.Domain.Sales.Payment
+namespace Macsauto.Domain.Sales.Entities
 {
     public abstract class Payment : Entity
     {

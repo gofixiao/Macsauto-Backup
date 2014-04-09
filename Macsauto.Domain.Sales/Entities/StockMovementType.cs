@@ -1,4 +1,4 @@
-﻿namespace Macsauto.Domain.Sales.Inventory.StockMovement
+﻿namespace Macsauto.Domain.Sales.Entities
 {
     public enum StockMovementType
     {

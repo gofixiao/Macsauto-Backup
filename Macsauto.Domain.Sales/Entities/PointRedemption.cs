@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Macsauto.Domain.Sales.PointRedemption
+namespace Macsauto.Domain.Sales.Entities
 {
     public class PointRedemption : Entity, IAutoGenerateCode
     {
-        private Customer.Customer _customer;
+        private Customer _customer;
         private IList<PointRedemptionItem> _pointRedemptionItems;
         private string _remark;
 
@@ -13,7 +13,7 @@ namespace Macsauto.Domain.Sales.PointRedemption
         {
         }
 
-        public PointRedemption(Customer.Customer customer)
+        public PointRedemption(Customer customer)
         {
             if (!customer.IsInActiveMembership)
             {
@@ -24,7 +24,7 @@ namespace Macsauto.Domain.Sales.PointRedemption
             _pointRedemptionItems = new List<PointRedemptionItem>();
         }
 
-        public PointRedemption(Customer.Customer customer, string remark)
+        public PointRedemption(Customer customer, string remark)
         {
             if (!customer.IsInActiveMembership)
             {
@@ -36,7 +36,7 @@ namespace Macsauto.Domain.Sales.PointRedemption
             _pointRedemptionItems = new List<PointRedemptionItem>();
         }
 
-        public virtual Customer.Customer Customer
+        public virtual Customer Customer
         {
             get { return _customer; }
             protected set { _customer = value; }
@@ -54,7 +54,7 @@ namespace Macsauto.Domain.Sales.PointRedemption
             protected set { _remark = value; }
         }
 
-        public virtual void AddRedemptionItem(Merchandise.Merchandise merchandise, long quantity)
+        public virtual void AddRedemptionItem(Merchandise merchandise, long quantity)
         {
             _pointRedemptionItems.Add(new PointRedemptionItem(this, merchandise, quantity));
         }

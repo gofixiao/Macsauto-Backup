@@ -1,4 +1,4 @@
-﻿namespace Macsauto.Domain.Sales.Payment
+﻿namespace Macsauto.Domain.Sales.Entities
 {
     public enum TenderType
     {

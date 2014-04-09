@@ -1,6 +1,4 @@
-﻿using Macsauto.Domain.Sales.Vehicle.VehicleModel;
-
-namespace Macsauto.Domain.Sales.Service
+﻿namespace Macsauto.Domain.Sales.Entities
 {
     public class ServicePricing : ValueObject<ServicePricing>
     {

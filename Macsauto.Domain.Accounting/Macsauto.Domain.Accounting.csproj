@@ -35,15 +35,14 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entity\Account.cs" />
-    <Compile Include="Entity\Account\AccountClassification.cs" />
-    <Compile Include="Entity\Account\AccountService.cs" />
-    <Compile Include="Entity\Journal\JournalEntry.cs" />
-    <Compile Include="Entity\Journal\JournalEntryItem.cs" />
-    <Compile Include="Entity\Period\FiscalYear.cs" />
-    <Compile Include="Entity\Period\IFiscalYearRepository.cs" />
-    <Compile Include="Entity\Period\IPeriodRepository.cs" />
-    <Compile Include="Entity\Period.cs" />
+    <Compile Include="Entities\Account.cs" />
+    <Compile Include="Entities\AccountClassification.cs" />
+    <Compile Include="Entities\Journal\JournalEntry.cs" />
+    <Compile Include="Entities\Journal\JournalEntryItem.cs" />
+    <Compile Include="Entities\FiscalYear.cs" />
+    <Compile Include="Repositories\IFiscalYearRepository.cs" />
+    <Compile Include="Repositories\IPeriodRepository.cs" />
+    <Compile Include="Entities\Period.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -52,9 +51,7 @@
       <Name>Macsauto.Domain</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Repository\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

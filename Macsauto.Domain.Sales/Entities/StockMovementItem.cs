@@ -1,17 +1,17 @@
-﻿namespace Macsauto.Domain.Sales.Inventory.StockMovement
+﻿namespace Macsauto.Domain.Sales.Entities
 {
     public class StockMovementItem : ValueObject<StockMovementItem>
     {
         private StockMovement _stockMovement;
         private Inventory _inventory;
-        private Storage.Storage _storage;
+        private Storage _storage;
         private long _quantity;
         private long _previousStock;
         private long _currentStock;
 
         protected StockMovementItem(){}
 
-        public StockMovementItem(StockMovement stockMovement, Inventory inventory, Storage.Storage storage, long quantity)
+        public StockMovementItem(StockMovement stockMovement, Inventory inventory, Storage storage, long quantity)
         {
             _stockMovement = stockMovement;
             _inventory = inventory;
@@ -19,8 +19,8 @@
             _quantity = quantity;
             _previousStock = _storage.GetStockOf(inventory);
 
-            if (_stockMovement.Type == StockMovementType.IN || 
-                _stockMovement.Type == StockMovementType.INITIALBALANCE)
+            if (_stockMovement.Type == StockMovementType.In || 
+                _stockMovement.Type == StockMovementType.Initialbalance)
             {
                 _storage.Store(inventory, quantity);
                 _currentStock = _previousStock + _quantity;
@@ -44,7 +44,7 @@
             protected set { _inventory = value; }
         }
 
-        public virtual Storage.Storage Storage
+        public virtual Storage Storage
         {
             get { return _storage; } 
             protected set { _storage = value; }
