@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Macsauto.Domain.Contract;
 
 namespace Macsauto.Domain.Sales.Entities
 {
@@ -66,11 +67,6 @@ namespace Macsauto.Domain.Sales.Entities
             var storedInventory = _storedInventories.FirstOrDefault(x => x.Inventory.Id == inventory.Id);
 
             return storedInventory == null ? 0 : storedInventory.Stock;
-        }
-
-        public override string GenerateNewCode<T>(IRepository<T> repository)
-        {
-            return 
         }
     }
 }

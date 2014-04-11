@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Macsauto.Domain.Contract;
 
 namespace Macsauto.Domain.Sales.Entities
 {
@@ -106,13 +107,6 @@ namespace Macsauto.Domain.Sales.Entities
         public override string ToString()
         {
             return Name.Fullname;
-        }
-
-        public override string GenerateNewCode<T>(IRepository<T> repository)
-        {
-            return string.Format(@"CU{0:00}{1:000}", 
-                repository.GetLastMonthlyIndex() + 1,
-                repository.GetLastDailyIndex() + 1);
         }
     }
 }

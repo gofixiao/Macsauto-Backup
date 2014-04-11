@@ -8,13 +8,8 @@
         private string _description;
         private long _volume;
 
-        protected Merchandise()
+        public Merchandise(string code, Inventory inventory, long pointCost, long volume) : base(code)
         {
-        }
-
-        public Merchandise(string code, Inventory inventory, long pointCost, long volume)
-        {
-            _code = code;
             _inventory = inventory;
             _pointCost = pointCost;
             _volume = volume;
@@ -22,9 +17,8 @@
             _description = _inventory.Description;
         }
 
-        public Merchandise(string code, Inventory inventory, long pointCost, long volume, string name, string description)
+        public Merchandise(string code, Inventory inventory, long pointCost, long volume, string name, string description) : base(code)
         {
-            _code = code;
             _inventory = inventory;
             _pointCost = pointCost;
             _volume = volume;

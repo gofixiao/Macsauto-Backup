@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Macsauto.Domain.Contract;
 
 namespace Macsauto.Domain.Sales.Entities
 {
@@ -70,14 +71,6 @@ namespace Macsauto.Domain.Sales.Entities
             }
 
             _stockMovementItems.Add(new StockMovementItem(this, inventory, storage, quantity));
-        }
-
-        public override string GenerateNewCode<T>(IRepository<T> repository)
-        {
-            return string.Format(@"MVM/{0}/{1:yyMMdd}/{2:000}",
-                    (int)Type,
-                    DateTime.Now,
-                    repository.GetLastDailyIndex() + 1);
         }
     }
 }

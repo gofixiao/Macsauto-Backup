@@ -48,6 +48,13 @@ namespace Macsauto.Domain
             _updatedOn = DateTime.Now;
         }
 
+        protected Entity(string code)
+        {
+            _code = code;
+            _createdOn = DateTime.Now;
+            _updatedOn = DateTime.Now;
+        }
+
         #endregion
 
         #region Methods (Public)

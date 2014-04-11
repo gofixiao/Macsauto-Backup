@@ -7,13 +7,8 @@
         private VehicleSize _size;
         private VehicleType _type;
 
-        protected VehicleModel()
+        public VehicleModel(string code, string name, VehicleBrand brand, VehicleSize size, VehicleType type) : base(code)
         {
-        }
-
-        public VehicleModel(string code, string name, VehicleBrand brand, VehicleSize size, VehicleType type)
-        {
-            _code = code;
             _name = name;
             _brand = brand;
             _size = size;

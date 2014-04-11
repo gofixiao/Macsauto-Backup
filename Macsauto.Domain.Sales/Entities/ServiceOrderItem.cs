@@ -73,7 +73,7 @@ namespace Macsauto.Domain.Sales.Entities
 
         public virtual void Void(Employee manager, string reason)
         {
-            if (manager.Position != Position.STOREMANAGER)
+            if (manager.Position != Position.StoreManager)
             {
                 throw new ApplicationException("Store Manager authorization required");
             }

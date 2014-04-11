@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Macsauto.Domain.Sales.Entities
 {
-    public class ServiceBooking : Entity, ITransaction, IAutoGenerateCode
+    public class ServiceBooking : Entity, ITransaction
     {
         private Customer _customer;
         private VehicleRegistration _vehicleRegistration;

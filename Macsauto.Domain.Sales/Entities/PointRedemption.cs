@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Macsauto.Domain.Sales.Entities
 {
-    public class PointRedemption : Entity, IAutoGenerateCode
+    public class PointRedemption : Entity
     {
         private Customer _customer;
         private IList<PointRedemptionItem> _pointRedemptionItems;

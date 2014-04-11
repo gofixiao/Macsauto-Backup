@@ -3,30 +3,33 @@ using System.Globalization;
 
 namespace Macsauto.Domain.Accounting.Entities
 {
-    public class FiscalYear : Domain.Entity
+    public class FiscalYear : Entity
     {
         private string _name;
         private DateTime _startDate;
         private DateTime _endDate;
         private DateTime? _closedOn;
+        private string _closingReason;
 
-        public FiscalYear(string name, DateTime startDate)
-        {
-            _name = name;
-            _startDate = startDate;
-            _endDate = startDate.AddYears(1);
-        }
-
-        public FiscalYear(string name, DateTime startDate, DateTime endDate)
+        protected FiscalYear(string code, string name, DateTime startDate, DateTime endDate) : base(code)
         {
             _name = name;
             _startDate = startDate;
             _endDate = endDate;
         }
 
-        public new virtual string Code
+        public static FiscalYear NewOneFiscalYear(string name, DateTime startDate)
         {
-            get { return "FY" + _startDate.Year.ToString(CultureInfo.InvariantCulture); }
+            var code = "FY" + startDate.Year.ToString(CultureInfo.InvariantCulture);
+
+            return new FiscalYear(code, name, startDate, startDate.AddYears(1));
+        }
+
+        public static FiscalYear NewPeriodicFiscalYear(string name, DateTime startDate, DateTime endDate)
+        {
+            var code = "FY" + startDate.Year.ToString(CultureInfo.InvariantCulture);
+
+            return new FiscalYear(code, name, startDate, endDate);
         }
 
         public virtual string Name
@@ -53,6 +56,12 @@ namespace Macsauto.Domain.Accounting.Entities
             protected set { _closedOn = value; }
         }
 
+        public virtual string ClosingReason
+        {
+            get { return _closingReason; }
+            set { _closingReason = value; }
+        }
+
         public virtual bool IsOpen
         {
             get { return _closedOn == null; }
@@ -65,7 +74,20 @@ namespace Macsauto.Domain.Accounting.Entities
 
         public void Close()
         {
+            if (IsClosed) throw new ApplicationException(@"Fiscal year is already closed.");
+
+            if (DateTime.Now < _endDate) throw new ApplicationException(@"Fiscal year period is not over.");
+
             _closedOn = DateTime.Now;
+            _closingReason = @"Period is finished";
+        }
+
+        public void ForceClose(string reason)
+        {
+            if (IsClosed) throw new Exception(@"Fiscal year is already closed.");
+
+            _closedOn = DateTime.Now;
+            _closingReason = reason;
         }
     }
 }

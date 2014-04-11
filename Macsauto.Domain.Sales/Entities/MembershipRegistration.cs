@@ -1,4 +1,5 @@
 ﻿using System;
+using Macsauto.Domain.Contract;
 
 namespace Macsauto.Domain.Sales.Entities
 {
@@ -15,13 +16,6 @@ namespace Macsauto.Domain.Sales.Entities
         {
             get { return _customer; }
             protected set { _customer = value; }
-        }
-
-        public override string GenerateNewCode<T>(IRepository<T> repository)
-        {
-            return string.Format(@"MREG/{0:yyMMdd}/{1:0000}/{2:0000}",
-                DateTime.Now,
-                repository.GetLastDailyIndex());
         }
     }
 }

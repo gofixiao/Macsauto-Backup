@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Macsauto.Domain.Sales.Entities
 {
-    public class ServiceOrder : Entity, ITransaction, IAutoGenerateCode
+    public class ServiceOrder : Entity, ITransaction
     {
         private VehicleRegistration _vehicleRegistration;
         private string _additionalInformation;
@@ -100,7 +100,7 @@ namespace Macsauto.Domain.Sales.Entities
 
         public string GetTransactionId()
         {
-            return _code;
+            return Code;
         }
 
         public string GetTransactionType()

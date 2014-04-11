@@ -7,13 +7,8 @@
         private UnitOfMeasurement _uoM;
         private long _buyPrice;
 
-        protected Inventory()
+        public Inventory(string code, string name, string description, long buyPrice, UnitOfMeasurement uoM) : base(code)
         {
-        }
-
-        public Inventory(string code, string name, string description, long buyPrice, UnitOfMeasurement uoM)
-        {
-            _code = code;
             _name = name;
             _buyPrice = buyPrice;
             _description = description;

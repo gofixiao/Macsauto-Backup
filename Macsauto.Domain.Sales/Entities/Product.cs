@@ -9,13 +9,8 @@
         private string _name;
         private string _description;
 
-        protected Product()
+        public Product(string code, Inventory inventory, ProductCategory category, long sellPrice) : base(code)
         {
-        }
-
-        public Product(string code, Inventory inventory, ProductCategory category, long sellPrice)
-        {
-            _code = code;
             _inventory = inventory;
             _category = category;
             _volume = 1;

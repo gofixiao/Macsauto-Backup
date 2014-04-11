@@ -11,19 +11,15 @@ namespace Macsauto.Domain.Sales.Entities
         private string _name;
         private string _description;
 
-        protected Service() {}
-
-        public Service(string code, ServiceCategory category, string name)
+        public Service(string code, ServiceCategory category, string name) : base(code)
         {
-            _code = code;
             _category = category;
             _name = name;
             _servicePrices = new List<ServicePricing>();
         }
 
-        public Service(string code, ServiceCategory category, string name, string description)
+        public Service(string code, ServiceCategory category, string name, string description) : base(code)
         {
-            _code = code;
             _category = category;
             _name = name;
             _description = description;

@@ -6,20 +6,14 @@
         private string _description;
         private ProductCategory _parentCategory;
 
-        protected ProductCategory()
+        public ProductCategory(string code, string name, string description) : base(code)
         {
-        }
-
-        public ProductCategory(string code, string name, string description)
-        {
-            _code = code;
             _name = name;
             _description = description;
         }
 
-        public ProductCategory(string code, string name, string description, ProductCategory parentCategory)
+        public ProductCategory(string code, string name, string description, ProductCategory parentCategory) : base(code)
         {
-            _code = code;
             _name = name;
             _description = description;
             _parentCategory = parentCategory;

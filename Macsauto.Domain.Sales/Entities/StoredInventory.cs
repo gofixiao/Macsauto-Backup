@@ -6,8 +6,6 @@
         private long _stock;
         private Storage _storage;
 
-        protected StoredInventory(){}
-
         public StoredInventory(Storage storage, Inventory inventory, long stock)
         {
             _storage = storage;

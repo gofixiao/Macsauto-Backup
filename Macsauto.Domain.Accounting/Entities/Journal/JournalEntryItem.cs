@@ -2,18 +2,18 @@
 {
     public class JournalEntryItem : ValueObject<JournalEntryItem>
     {
-        private Account.Account _account;
+        private Account _account;
         private JournalItemType _type;
         private long _amount;
 
-        public JournalEntryItem(Account.Account account, JournalItemType type, long amount)
+        public JournalEntryItem(Account account, JournalItemType type, long amount)
         {
             _account = account;
             _type = type;
             _amount = amount;
         }
 
-        public virtual Account.Account Account
+        public virtual Account Account
         {
             get { return _account; }
             protected set { _account = value; }
@@ -35,8 +35,7 @@
 
     public enum JournalItemType
     {
-// ReSharper disable InconsistentNaming
-        DEBIT, CREDIT
-// ReSharper restore InconsistentNaming
+        Debit, 
+        Credit
     }
 }

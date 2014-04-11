@@ -5,6 +5,7 @@ namespace Macsauto.Domain.Accounting.Repositories
 {
     public interface IPeriodRepository
     {
+        Period GetActivePeriod();
         IList<Period> GetAllInFiscalYear(FiscalYear fiscalYear); 
     }
 }

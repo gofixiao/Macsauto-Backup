@@ -8,19 +8,16 @@
         private AccountClassification _classification;
         private long _debit;
         private long _credit;
-
         
-        public Account(string code, string name, AccountClassification classification, string description = "")
+        public Account(string name, AccountClassification classification, string description = "")
         {
-            _code = code;
             _name = name;
             _classification = classification;
             _description = description;
         }
 
-        public Account(string code, string name, AccountClassification classification, long debit, long credit, string description = "")
+        public Account(string name, AccountClassification classification, long debit, long credit, string description = "")
         {
-            _code = code;
             _name = name;
             _classification = classification;
             _debit = debit;
@@ -28,9 +25,8 @@
             _description = description;
         }
 
-        public Account(string code, string name, AccountClassification classification, long debit, long credit, Account parent, string description = "")
+        public Account(string name, AccountClassification classification, long debit, long credit, Account parent, string description = "")
         {
-            _code = code;
             _name = name;
             _classification = classification;
             _debit = debit;

@@ -5,13 +5,8 @@
         private string _name;
         private Address _address;
 
-        protected Branch()
+        public Branch(string name, Address address)
         {
-        }
-
-        public Branch(string code, string name, Address address)
-        {
-            _code = code;
             _name = name;
             _address = address;
         }

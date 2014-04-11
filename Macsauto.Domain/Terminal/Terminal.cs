@@ -7,9 +7,8 @@
 
         protected Terminal(){}
 
-        public Terminal(string code, string macAddress, Branch branch)
+        public Terminal(string macAddress, Branch branch)
         {
-            _code = code;
             _macAddress = macAddress;
             _branch = branch;
         }

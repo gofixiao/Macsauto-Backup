@@ -4,16 +4,16 @@ using System.Linq;
 
 namespace Macsauto.Domain.Accounting.Entities.Journal
 {
-    public class JournalEntry : Domain.Entity
+    public class JournalEntry : Entity
     {
         private string _description;
         private Branch _branch;
         private string _reference;
         private IList<JournalEntryItem> _journalEntryItems;
         private DateTime _postDate;
-        private Period.Period _period;
+        private Period _period;
 
-        public JournalEntry(string description, Branch branch, Period.Period period, string reference = "")
+        public JournalEntry(string description, Branch branch, Period period, string reference = "")
         {
             _description = description;
             _branch = branch;
@@ -22,7 +22,7 @@ namespace Macsauto.Domain.Accounting.Entities.Journal
             _journalEntryItems = new List<JournalEntryItem>();
         }
 
-        public JournalEntry(string description, Branch branch, Period.Period period, bool postNow = true, string reference = "")
+        public JournalEntry(string description, Branch branch, Period period, bool postNow = true, string reference = "")
         {
             _description = description;
             _branch = branch;
@@ -54,7 +54,7 @@ namespace Macsauto.Domain.Accounting.Entities.Journal
             protected set { _reference = value; }
         }
 
-        public virtual Period.Period Period
+        public virtual Period Period
         {
             get { return _period; }
             protected set { _period = value; }

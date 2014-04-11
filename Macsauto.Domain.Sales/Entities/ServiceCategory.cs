@@ -6,20 +6,14 @@
         private string _description;
         private ServiceCategory _parentCategory;
 
-        protected ServiceCategory()
+        public ServiceCategory(string code, string name, string description) : base(code)
         {
-        }
-
-        public ServiceCategory(string code, string name, string description)
-        {
-            _code = code;
             _name = name;
             _description = description;
         }
 
-        public ServiceCategory(string code, string name, string description, ServiceCategory parentCategory)
+        public ServiceCategory(string code, string name, string description, ServiceCategory parentCategory) : base(code)
         {
-            _code = code;
             _name = name;
             _description = description;
             _parentCategory = parentCategory;

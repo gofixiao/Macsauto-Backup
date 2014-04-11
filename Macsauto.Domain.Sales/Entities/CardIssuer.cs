@@ -4,13 +4,8 @@
     {
         private string _name;
 
-        protected CardIssuer()
+        public CardIssuer(string name) : base(name)
         {
-        }
-
-        public CardIssuer(string code, string name)
-        {
-            _code = code;
             _name = name;
         }
 

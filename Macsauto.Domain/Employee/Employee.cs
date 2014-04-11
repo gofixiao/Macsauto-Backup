@@ -5,10 +5,7 @@
         private Branch _branch;
         private Position _position;
 
-        protected Employee(){}
-
-        public Employee(Branch branch, Position position, PersonName name, Gender gender)
-            : base(name)
+        public Employee(Branch branch, Position position, PersonName name, Gender gender) : base(name)
         {
             _branch = branch;
             _position = position;

@@ -4,7 +4,7 @@ using Macsauto.Domain.Accounting.Repositories;
 
 namespace Macsauto.Domain.Accounting.Entities
 {
-    public class Period : Domain.Entity
+    public class Period : Entity
     {
         private readonly IPeriodRepository _repo;
         private string _name;

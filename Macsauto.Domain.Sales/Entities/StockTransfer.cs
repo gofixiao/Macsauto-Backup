@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Macsauto.Domain.Contract;
 
 namespace Macsauto.Domain.Sales.Entities
 {
@@ -45,13 +46,6 @@ namespace Macsauto.Domain.Sales.Entities
             to.Store(inventory, quantity);
 
             _stockTransferItems.Add(new StockTransferItem(inventory, from, to, quantity));
-        }
-
-        public override string GenerateNewCode<T>(IRepository<T> repository)
-        {
-            return string.Format(@"TRF/{0:yyMMdd}/{1:000}",
-                    DateTime.Now,
-                    repository.GetLastDailyIndex() + 1);
         }
     }
 }

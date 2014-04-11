@@ -118,18 +118,5 @@ namespace Macsauto.Domain.Sales.Entities
         {
             _point -= point;
         }
-
-        public override string GenerateNewCode<T>(IRepository<T> repository)
-        {
-            var randomTwoDigitNumber = @"";
-            var rand = new Random();
-
-            for (var i = 0; i < 2; i++)
-            {
-                randomTwoDigitNumber += rand.Next(0, 9).ToString(CultureInfo.InvariantCulture);
-            }
-
-            return randomTwoDigitNumber + DateTime.Now.ToString(@"ffssmmHHddMMyy");
-        }
     }
 }
