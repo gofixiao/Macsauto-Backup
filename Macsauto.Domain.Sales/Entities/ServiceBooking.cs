@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Macsauto.Domain.Sales.Entities
 {
-    public class ServiceBooking : Entity, ITransaction
+    public class ServiceBooking : Entity, IChargableTransaction
     {
         private Customer _customer;
         private VehicleRegistration _vehicleRegistration;
@@ -12,10 +12,6 @@ namespace Macsauto.Domain.Sales.Entities
         private DateTime _dueDate;
         private IList<ServiceBookingItem> _serviceBookingItems;
         private DateTime? _checkedOutOn;
-
-        protected ServiceBooking()
-        {
-        }
 
         public ServiceBooking(Customer customer, VehicleRegistration vehicleRegistration, DateTime dueDate)
         {
@@ -84,24 +80,28 @@ namespace Macsauto.Domain.Sales.Entities
             return serviceOrder;
         }
 
-        public virtual string GetTransactionId()
+        #region IChargableTransaction Members
+
+        public Customer TransactionCustomer
         {
-            return Code;
+            get { return _customer; }
         }
 
-        public virtual string GetTransactionType()
+        public string TransactionCode
         {
-            return @"SERVICEBOOKING";
+            get { return Code; }
         }
 
-        public virtual long GetTotalCharged()
+        public string TransactionName
         {
-            return _serviceBookingItems.Sum(serviceBookingItem => serviceBookingItem.Price);
+            get { return @"SERVICE BOOKING"; }
         }
 
-        public virtual Customer GetCustomer()
+        public double TotalCharge
         {
-            return _customer;
+            get { return _serviceBookingItems.Sum(serviceBookingItem => serviceBookingItem.Price); }
         }
+
+        #endregion
     }
 }

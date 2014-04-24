@@ -7,10 +7,6 @@
         private long _price;
         private long _currentPrice;
 
-        protected ServiceBookingItem()
-        {
-        }
-
         public ServiceBookingItem(ServiceBooking serviceBooking, Service service, long price)
         {
             _serviceBooking = serviceBooking;

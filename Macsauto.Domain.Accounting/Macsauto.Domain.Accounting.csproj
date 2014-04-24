@@ -67,15 +67,18 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\Account.cs" />
+    <Compile Include="Account\Account.cs" />
     <Compile Include="Entities\AccountClassification.cs" />
+    <Compile Include="Repositories\IAccountRepository.cs" />
     <Compile Include="Entities\Journal\JournalEntry.cs" />
     <Compile Include="Entities\Journal\JournalEntryItem.cs" />
     <Compile Include="Entities\FiscalYear.cs" />
     <Compile Include="Repositories\IFiscalYearRepository.cs" />
+    <Compile Include="Repositories\IJournalEntryRepository.cs" />
     <Compile Include="Repositories\IPeriodRepository.cs" />
     <Compile Include="Entities\Period.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\JournalingService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Macsauto.Domain\Macsauto.Domain.csproj">

@@ -2,7 +2,7 @@
 {
     public class CashPayment : Payment
     {
-        public CashPayment(ITransaction transaction, long charged, long paid, long basePoint) : base(transaction, charged, paid, basePoint)
+        public CashPayment(IChargable chargable, long charged, long paid, long basePoint) : base(chargable, charged, paid, basePoint)
         {
         }
 

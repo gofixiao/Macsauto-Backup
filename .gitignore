@@ -91,7 +91,6 @@ _TeamCity*
 *.dotCover
 
 # NCrunch
-*.ncrunch*
 _NCrunch_*
 .*crunch*.local.xml
 
@@ -121,6 +120,8 @@ publish/
 # Publish Web Output
 *.[Pp]ublish.xml
 *.azurePubxml
+## TODO: Comment the next line if you want to checkin your web deploy settings but do note that will include unencrypted passwords
+*.pubxml
 
 # NuGet Packages Directory
 packages/*
@@ -172,22 +173,3 @@ UpgradeLog*.htm
 
 # Microsoft Fakes
 FakesAssemblies/
-
-# =========================
-# Windows detritus
-# =========================
-
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
-
-# Folder config file
-Desktop.ini
-
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
-
-# ========================
-# SVN Files
-# ========================
-.svn/

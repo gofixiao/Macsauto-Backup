@@ -11,14 +11,12 @@ namespace Macsauto.Domain.Sales.Entities
         private string _transactionCode;
         private string _transactionType;
 
-        protected Payment(){}
-
-        protected Payment(ITransaction transaction, long charged, long paid, long basePoint)
+        protected Payment(IChargable chargable, long charged, long paid, long basePoint)
         {
-            var customer = transaction.GetCustomer();
+            var customer = chargable.GetCustomer();
 
-            _transactionCode = transaction.GetTransactionId();
-            _transactionType = transaction.GetTransactionType();
+            _transactionCode = chargable.GetTransactionId();
+            _transactionType = chargable.GetTransactionType();
             _charged = charged;
             _paid = paid;
             _change = _paid - _charged <= 0 ? 0 : _paid - _charged;
@@ -26,9 +24,9 @@ namespace Macsauto.Domain.Sales.Entities
 
             if (customer.IsInActiveMembership)
             {
-                var totalPointEarned = Math.Floor((double)charged / _basePoint);
+                var totalPointsEarned = Math.Floor((double)charged / _basePoint);
 
-                customer.Membership.AddPoint((long)totalPointEarned);
+                customer.Membership.AddPoint((long)totalPointsEarned);
             }
         }
 

@@ -5,6 +5,6 @@ namespace Macsauto.Domain.Sales.Repositories
 {
     public interface IPaymentRepository : IRepository<Payment>
     {
-        Payment GetPaymentForTransaction(ITransaction transaction);
+        Payment GetPaymentFor(IChargableTransaction chargable);
     }
 }

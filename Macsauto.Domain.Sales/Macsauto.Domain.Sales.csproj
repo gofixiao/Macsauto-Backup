@@ -84,7 +84,7 @@
     <Compile Include="Repositories\IStorageRepository.cs" />
     <Compile Include="Entities\Storage.cs" />
     <Compile Include="Entities\StoredInventory.cs" />
-    <Compile Include="ITransaction.cs" />
+    <Compile Include="IChargableTransaction.cs" />
     <Compile Include="Repositories\IMerchandiseRepository.cs" />
     <Compile Include="Entities\Merchandise.cs" />
     <Compile Include="Entities\CardIssuer.cs" />
@@ -103,7 +103,6 @@
     <Compile Include="Repositories\IProductRepository.cs" />
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Repositories\IUnitOfMeasurementRepository.cs" />
-    <Compile Include="Entities\UnitOfMeasurement.cs" />
     <Compile Include="Promotion\Condition.cs" />
     <Compile Include="Promotion\OrderPromotion.cs" />
     <Compile Include="Promotion\ProductDiscount.cs" />
@@ -135,6 +134,7 @@
     <Compile Include="Entities\VehicleSize.cs" />
     <Compile Include="Entities\VehicleType.cs" />
     <Compile Include="Entities\VehicleRegistration.cs" />
+    <Compile Include="Services\PaymentService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Macsauto.Domain\Macsauto.Domain.csproj">

@@ -42,6 +42,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contract\ICodeGenerator.cs" />
     <Compile Include="Contract\IJournalable.cs" />
     <Compile Include="Address\Address.cs" />
     <Compile Include="Address\City\City.cs" />

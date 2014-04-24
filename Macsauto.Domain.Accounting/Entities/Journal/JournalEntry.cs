@@ -80,11 +80,11 @@ namespace Macsauto.Domain.Accounting.Entities.Journal
             }
 
             var debit = _journalEntryItems
-                .Where(x => x.Type == JournalItemType.DEBIT)
+                .Where(x => x.Type == JournalItemType.Debit)
                 .Sum(x => x.Amount);
 
             var credit = _journalEntryItems
-                .Where(x => x.Type == JournalItemType.CREDIT)
+                .Where(x => x.Type == JournalItemType.Credit)
                 .Sum(x => x.Amount);
 
             return debit == credit;

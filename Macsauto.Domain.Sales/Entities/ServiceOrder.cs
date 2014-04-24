@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Macsauto.Domain.Sales.Entities
 {
-    public class ServiceOrder : Entity, ITransaction
+    public class ServiceOrder : Entity, IChargableTransaction
     {
         private VehicleRegistration _vehicleRegistration;
         private string _additionalInformation;
@@ -13,10 +13,6 @@ namespace Macsauto.Domain.Sales.Entities
         private Customer _customer;
         private DateTime? _finishedOn;
         private ServiceBooking _serviceBooking;
-
-        protected ServiceOrder()
-        {
-        }
 
         public ServiceOrder(Customer customer, VehicleRegistration vehicleRegistration, string additionalInformation = null)
         {
@@ -83,49 +79,67 @@ namespace Macsauto.Domain.Sales.Entities
             protected set { _serviceOrderProduct = value; }
         }
 
+        public virtual bool IsFinished
+        {
+            get { return _finishedOn != null; }
+        }
+
         public void AddServiceOrderItem(Service service, long price)
         {
+            if(IsFinished) throw new ApplicationException(@"Service order is finished and non-editable");
+
             _serviceOrderItems.Add(new ServiceOrderItem(this, service, price));
         }
 
         public void AddServiceOrderProduct(Product product, long quantity, long price)
         {
+            if (IsFinished) throw new ApplicationException(@"Service order is finished and non-editable");
+
             _serviceOrderProduct.Add(new ServiceOrderProduct(this, product, quantity, price));
         }
 
         public void Finish()
         {
+            if (IsFinished) throw new ApplicationException(@"Service order is finished and non-editable");
+
             _finishedOn = DateTime.Now;
         }
 
-        public string GetTransactionId()
+        #region IChargableTransaction Members
+
+        public Customer TransactionCustomer
         {
-            return Code;
+            get { return _customer; }
         }
 
-        public string GetTransactionType()
+        public string TransactionCode
         {
-            return @"Service Order";
+            get { return Code; }
         }
 
-        public virtual long GetTotalCharged()
+        public string TransactionName
         {
-            long totalCharged = 0;
+            get { return @"SERVICE ORDER"; }
+        }
 
-            totalCharged += _serviceOrderItems.Sum(serviceOrderItem => serviceOrderItem.Price);
-            totalCharged += _serviceOrderProduct.Sum(serviceOrderProduct => serviceOrderProduct.Price);
-
-            if (_serviceBooking != null)
+        public double TotalCharge
+        {
+            get
             {
-                totalCharged -= _serviceBooking.GetTotalCharged();
+                double totalCharged = 0;
+
+                totalCharged += _serviceOrderItems.Sum(serviceOrderItem => serviceOrderItem.Price);
+                totalCharged += _serviceOrderProduct.Sum(serviceOrderProduct => serviceOrderProduct.Price);
+
+                if (_serviceBooking != null)
+                {
+                    totalCharged -= _serviceBooking.TotalCharge;
+                }
+
+                return totalCharged;
             }
-
-            return totalCharged;
         }
 
-        public Customer GetCustomer()
-        {
-            return _customer;
-        }
+        #endregion
     }
 }

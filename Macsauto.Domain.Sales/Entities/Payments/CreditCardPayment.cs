@@ -6,11 +6,7 @@
         private CardIssuer _cardIssuer;
         private string _cardNumber;
 
-        protected CreditCardPayment()
-        {
-        }
-
-        public CreditCardPayment(ITransaction transaction, long charged, CreditCardType creditCardType, string cardNumber, CardIssuer cardIssuer, long basePoint) : base(transaction, charged, charged, basePoint)
+        public CreditCardPayment(IChargable chargable, long charged, CreditCardType creditCardType, string cardNumber, CardIssuer cardIssuer, long basePoint) : base(chargable, charged, charged, basePoint)
         {
             _creditCardType = creditCardType;
             _cardIssuer = cardIssuer;
