@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>b9ffb3f9-5964-4563-9328-2356de8e7bd2</ProjectGuid>
+    <ProjectGuid>{C9B93766-4C66-46A3-99B1-97C0A1D4CB1F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Macsauto.Domain.BranchManagement</RootNamespace>
@@ -33,15 +33,29 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Entities\Employee.cs" />
+    <Compile Include="Repositories\IEmployeeRepository.cs" />
+    <Compile Include="Entities\Position.cs" />
+    <Compile Include="Entities\Branch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\IBranchRepository.cs" />
+    <Compile Include="Repositories\ITerminalRepository.cs" />
+    <Compile Include="Entities\Terminal.cs" />
+    <Compile Include="Repositories\IUserRepository.cs" />
+    <Compile Include="Entities\User.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Macsauto.Domain.Core\Macsauto.Domain.Common.csproj">
+      <Project>{2B656943-89C9-4360-ADE6-E85064169B2D}</Project>
+      <Name>Macsauto.Domain.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Macsauto.Domain\Macsauto.Domain.csproj">
+      <Project>{939B9085-D6B8-4D96-9763-73A737B396BC}</Project>
+      <Name>Macsauto.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

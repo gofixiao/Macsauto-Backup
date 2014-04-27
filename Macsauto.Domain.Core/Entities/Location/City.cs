@@ -1,11 +1,13 @@
-﻿namespace Macsauto.Domain.Core.Location.City
+﻿using System;
+
+namespace Macsauto.Domain.Core.Entities.Location
 {
-    public class City : Entity
+    public class City : Entity<City, Guid>, IAggregateRoot
     {
         private string _name;        
-        private Province.Province _province;
+        private Province _province;
 
-        public virtual Province.Province Province
+        public virtual Province Province
         {
             get { return _province; }
             protected set { _province = value; }
@@ -17,7 +19,7 @@
             protected set { _name = value; }
         }
 
-        public City(string name, Province.Province province)
+        public City(string name, Province province)
         {
             _name = name;
             _province = province;

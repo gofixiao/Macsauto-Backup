@@ -42,26 +42,9 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contract\ICodeGenerator.cs" />
-    <Compile Include="Contract\IJournalable.cs" />
-    <Compile Include="Address\Address.cs" />
-    <Compile Include="Address\City\City.cs" />
-    <Compile Include="Address\City\ICityRepository.cs" />
-    <Compile Include="Address\Province\IProvinceRepository.cs" />
-    <Compile Include="Address\Province\Province.cs" />
-    <Compile Include="Gender.cs" />
-    <Compile Include="Contract\IRepository.cs" />
-    <Compile Include="Person.cs" />
-    <Compile Include="PersonName.cs" />
-    <Compile Include="Branch\Branch.cs" />
-    <Compile Include="Branch\IBranchRepository.cs" />
-    <Compile Include="Employee\Employee.cs" />
-    <Compile Include="Employee\IEmployeeRepository.cs" />
-    <Compile Include="Employee\Position.cs" />
-    <Compile Include="Terminal\ITerminalRepository.cs" />
-    <Compile Include="Terminal\Terminal.cs" />
-    <Compile Include="User\IUserRepository.cs" />
-    <Compile Include="User\User.cs" />
+    <Compile Include="IAggregateRoot.cs" />
+    <Compile Include="ICodeGenerator.cs" />
+    <Compile Include="IRepository.cs" />
     <Compile Include="Entity.cs" />
     <Compile Include="ValueObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

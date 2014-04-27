@@ -1,6 +1,4 @@
-﻿using Macsauto.Domain.Core.Location.City.City;
-
-namespace Macsauto.Domain.Core.Location    
+﻿namespace Macsauto.Domain.Core.Entities.Location    
 {
     public class Address : ValueObject<Address>
     {
@@ -8,14 +6,14 @@ namespace Macsauto.Domain.Core.Location
         private string _zipcode;
         private string _addressLine;
 
-        public Address(City.City city, string zipcode, string addressLine)
+        public Address(City city, string zipcode, string addressLine)
         {
             _city = city;
             _zipcode = zipcode;
             _addressLine = addressLine;
         }
 
-        public virtual City.City City
+        public virtual City City
         {
             get { return _city; }
             protected set { _city = value; }
