@@ -15,9 +15,17 @@ namespace Macsauto.Domain
     {
         private DateTime _updatedOn;
         private DateTime _createdOn;
+        private string _code;
 
         protected Entity()
         {
+            _createdOn = DateTime.Now;
+            _updatedOn = DateTime.Now;
+        }
+
+        protected Entity(string code)
+        {
+            _code = code;
             _createdOn = DateTime.Now;
             _updatedOn = DateTime.Now;
         }
@@ -30,7 +38,11 @@ namespace Macsauto.Domain
         /// <summary>
         /// Entity's human readable code
         /// </summary>
-        public virtual string Code { get; set; }
+        public virtual string Code
+        {
+            get { return _code; }
+            set { _code = value; }
+        }
 
         /// <summary>
         /// Entity's creation timestamp

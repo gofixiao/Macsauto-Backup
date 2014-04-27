@@ -1,24 +1,28 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 
 namespace Macsauto.Domain.Accounting.Entities
 {
-    public class FiscalYear : Entity
+    public class FiscalYear : Entity<FiscalYear, Guid>, IAggregateRoot
     {
         private string _name;
         private DateTime _startDate;
         private DateTime _endDate;
         private DateTime? _closedOn;
         private string _closingReason;
+        private IList<Period> _registeredPeriods; 
 
         protected FiscalYear(string code, string name, DateTime startDate, DateTime endDate) : base(code)
         {
             _name = name;
             _startDate = startDate;
             _endDate = endDate;
+            _registeredPeriods = new List<Period>();
         }
 
-        public static FiscalYear NewOneFiscalYear(string name, DateTime startDate)
+        public static FiscalYear NewSingleFiscalYear(string name, DateTime startDate)
         {
             var code = "FY" + startDate.Year.ToString(CultureInfo.InvariantCulture);
 
@@ -60,6 +64,17 @@ namespace Macsauto.Domain.Accounting.Entities
         {
             get { return _closingReason; }
             set { _closingReason = value; }
+        }
+
+        public virtual IList<Period> RegisteredPeriod
+        {
+            get { return _registeredPeriods; }
+            protected set { _registeredPeriods = value; }
+        }
+
+        public bool IsPeriodOverlaps(DateTime startDate, DateTime endDate)
+        {
+            return _registeredPeriods.Any(x => startDate > x.EndDate && endDate < x.EndDate);
         }
 
         public virtual bool IsOpen

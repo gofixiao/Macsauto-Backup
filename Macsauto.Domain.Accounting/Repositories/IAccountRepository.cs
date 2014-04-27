@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Macsauto.Domain.Accounting.Entities;
-using Macsauto.Domain.Contract;
 
 namespace Macsauto.Domain.Accounting.Repositories
 {
-    interface IAccountRepository : IRepository<Account>
+    interface IAccountRepository : IRepository<Account, Guid>
     {
         IList<Account> GetAllInClassification(AccountClassification classification);
     }

@@ -1,6 +1,8 @@
-﻿namespace Macsauto.Domain.Accounting.Entities
+﻿using System;
+
+namespace Macsauto.Domain.Accounting.Entities
 {
-    public class Account : Entity
+    public class Account : Entity<Account, Guid>
     {
         private string _name;
         private string _description;

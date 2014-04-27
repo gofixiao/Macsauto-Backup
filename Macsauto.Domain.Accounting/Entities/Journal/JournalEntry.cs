@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Macsauto.Domain.BranchManagement.Entities;
 
 namespace Macsauto.Domain.Accounting.Entities.Journal
 {
-    public class JournalEntry : Entity
+    public class JournalEntry : Entity<JournalEntry, Guid>
     {
         private string _description;
         private Branch _branch;
